@@ -13,6 +13,10 @@
 		31C9C10A1FF23687004F306E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31C9C1091FF23687004F306E /* Assets.xcassets */; };
 		31C9C10D1FF23687004F306E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31C9C10B1FF23687004F306E /* LaunchScreen.storyboard */; };
 		31C9C1161FF239B7004F306E /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C9C1151FF239B7004F306E /* Card.swift */; };
+		31C9C1181FF23A00004F306E /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C9C1171FF23A00004F306E /* Deck.swift */; };
+		31C9C11A1FF23A3E004F306E /* CardFieldProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C9C1191FF23A3E004F306E /* CardFieldProtocol.swift */; };
+		31C9C11C1FF23A5A004F306E /* PlayerHandField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C9C11B1FF23A5A004F306E /* PlayerHandField.swift */; };
+		31C9C11E1FF23A71004F306E /* PlayerField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C9C11D1FF23A71004F306E /* PlayerField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		31C9C10C1FF23687004F306E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		31C9C10E1FF23687004F306E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		31C9C1151FF239B7004F306E /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		31C9C1171FF23A00004F306E /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
+		31C9C1191FF23A3E004F306E /* CardFieldProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFieldProtocol.swift; sourceTree = "<group>"; };
+		31C9C11B1FF23A5A004F306E /* PlayerHandField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerHandField.swift; sourceTree = "<group>"; };
+		31C9C11D1FF23A71004F306E /* PlayerField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +79,10 @@
 			isa = PBXGroup;
 			children = (
 				31C9C1151FF239B7004F306E /* Card.swift */,
+				31C9C1171FF23A00004F306E /* Deck.swift */,
+				31C9C1191FF23A3E004F306E /* CardFieldProtocol.swift */,
+				31C9C11B1FF23A5A004F306E /* PlayerHandField.swift */,
+				31C9C11D1FF23A71004F306E /* PlayerField.swift */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -147,9 +159,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31C9C1181FF23A00004F306E /* Deck.swift in Sources */,
 				31C9C1051FF23687004F306E /* ViewController.swift in Sources */,
+				31C9C11A1FF23A3E004F306E /* CardFieldProtocol.swift in Sources */,
 				31C9C1161FF239B7004F306E /* Card.swift in Sources */,
+				31C9C11C1FF23A5A004F306E /* PlayerHandField.swift in Sources */,
 				31C9C1031FF23687004F306E /* AppDelegate.swift in Sources */,
+				31C9C11E1FF23A71004F306E /* PlayerField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
