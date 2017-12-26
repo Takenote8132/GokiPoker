@@ -14,6 +14,7 @@ protocol CardFieldProtcol{
     var index: Int {get}//to recoggnize who is master of this field.
     func showAll() -> String
     mutating func addCard(card: Card) -> Void
+    init(index: Int)
 }
 
 //MARK: - OptionalMethod

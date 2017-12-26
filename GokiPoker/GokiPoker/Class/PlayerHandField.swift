@@ -11,6 +11,9 @@ import Foundation
 class PlayerHandField: CardFieldProtcol {
     
     var cardsInField: [Card] = []
-    var index: Int = 0
+    var index: Int
     
+    required init(index: Int){
+        self.index = index
+    }
 }

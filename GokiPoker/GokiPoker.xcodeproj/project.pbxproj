@@ -17,6 +17,8 @@
 		31C9C11A1FF23A3E004F306E /* CardFieldProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C9C1191FF23A3E004F306E /* CardFieldProtocol.swift */; };
 		31C9C11C1FF23A5A004F306E /* PlayerHandField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C9C11B1FF23A5A004F306E /* PlayerHandField.swift */; };
 		31C9C11E1FF23A71004F306E /* PlayerField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C9C11D1FF23A71004F306E /* PlayerField.swift */; };
+		31C9C1201FF24432004F306E /* GameField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C9C11F1FF24432004F306E /* GameField.swift */; };
+		31C9C1221FF2449E004F306E /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C9C1211FF2449E004F306E /* Player.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		31C9C1191FF23A3E004F306E /* CardFieldProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFieldProtocol.swift; sourceTree = "<group>"; };
 		31C9C11B1FF23A5A004F306E /* PlayerHandField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerHandField.swift; sourceTree = "<group>"; };
 		31C9C11D1FF23A71004F306E /* PlayerField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerField.swift; sourceTree = "<group>"; };
+		31C9C11F1FF24432004F306E /* GameField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameField.swift; sourceTree = "<group>"; };
+		31C9C1211FF2449E004F306E /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,8 @@
 				31C9C1191FF23A3E004F306E /* CardFieldProtocol.swift */,
 				31C9C11B1FF23A5A004F306E /* PlayerHandField.swift */,
 				31C9C11D1FF23A71004F306E /* PlayerField.swift */,
+				31C9C11F1FF24432004F306E /* GameField.swift */,
+				31C9C1211FF2449E004F306E /* Player.swift */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -159,12 +165,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31C9C1201FF24432004F306E /* GameField.swift in Sources */,
 				31C9C1181FF23A00004F306E /* Deck.swift in Sources */,
 				31C9C1051FF23687004F306E /* ViewController.swift in Sources */,
 				31C9C11A1FF23A3E004F306E /* CardFieldProtocol.swift in Sources */,
 				31C9C1161FF239B7004F306E /* Card.swift in Sources */,
 				31C9C11C1FF23A5A004F306E /* PlayerHandField.swift in Sources */,
 				31C9C1031FF23687004F306E /* AppDelegate.swift in Sources */,
+				31C9C1221FF2449E004F306E /* Player.swift in Sources */,
 				31C9C11E1FF23A71004F306E /* PlayerField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
