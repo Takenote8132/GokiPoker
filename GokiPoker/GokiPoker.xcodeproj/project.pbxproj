@@ -19,6 +19,10 @@
 		31C9C11E1FF23A71004F306E /* PlayerField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C9C11D1FF23A71004F306E /* PlayerField.swift */; };
 		31C9C1201FF24432004F306E /* GameField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C9C11F1FF24432004F306E /* GameField.swift */; };
 		31C9C1221FF2449E004F306E /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C9C1211FF2449E004F306E /* Player.swift */; };
+		31C9C1281FF24FD5004F306E /* InitialSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C9C1271FF24FD5004F306E /* InitialSettingViewController.swift */; };
+		31C9C12B1FF305D8004F306E /* TestCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C9C12A1FF305D8004F306E /* TestCustomView.swift */; };
+		31C9C12D1FF305F2004F306E /* TestCustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31C9C12C1FF305F2004F306E /* TestCustomView.xib */; };
+		31C9C12F1FF3105F004F306E /* TestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C9C12E1FF3105F004F306E /* TestTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,10 @@
 		31C9C11D1FF23A71004F306E /* PlayerField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerField.swift; sourceTree = "<group>"; };
 		31C9C11F1FF24432004F306E /* GameField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameField.swift; sourceTree = "<group>"; };
 		31C9C1211FF2449E004F306E /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		31C9C1271FF24FD5004F306E /* InitialSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialSettingViewController.swift; sourceTree = "<group>"; };
+		31C9C12A1FF305D8004F306E /* TestCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCustomView.swift; sourceTree = "<group>"; };
+		31C9C12C1FF305F2004F306E /* TestCustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestCustomView.xib; sourceTree = "<group>"; };
+		31C9C12E1FF3105F004F306E /* TestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,9 +76,11 @@
 		31C9C1011FF23687004F306E /* GokiPoker */ = {
 			isa = PBXGroup;
 			children = (
+				31C9C1291FF30594004F306E /* CustomView */,
 				31C9C1141FF238F7004F306E /* Class */,
 				31C9C1021FF23687004F306E /* AppDelegate.swift */,
 				31C9C1041FF23687004F306E /* ViewController.swift */,
+				31C9C1271FF24FD5004F306E /* InitialSettingViewController.swift */,
 				31C9C1061FF23687004F306E /* Main.storyboard */,
 				31C9C1091FF23687004F306E /* Assets.xcassets */,
 				31C9C10B1FF23687004F306E /* LaunchScreen.storyboard */,
@@ -91,6 +101,16 @@
 				31C9C1211FF2449E004F306E /* Player.swift */,
 			);
 			path = Class;
+			sourceTree = "<group>";
+		};
+		31C9C1291FF30594004F306E /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				31C9C12A1FF305D8004F306E /* TestCustomView.swift */,
+				31C9C12C1FF305F2004F306E /* TestCustomView.xib */,
+				31C9C12E1FF3105F004F306E /* TestTableViewCell.swift */,
+			);
+			path = CustomView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,6 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				31C9C10D1FF23687004F306E /* LaunchScreen.storyboard in Resources */,
+				31C9C12D1FF305F2004F306E /* TestCustomView.xib in Resources */,
 				31C9C10A1FF23687004F306E /* Assets.xcassets in Resources */,
 				31C9C1081FF23687004F306E /* Main.storyboard in Resources */,
 			);
@@ -170,7 +191,10 @@
 				31C9C1051FF23687004F306E /* ViewController.swift in Sources */,
 				31C9C11A1FF23A3E004F306E /* CardFieldProtocol.swift in Sources */,
 				31C9C1161FF239B7004F306E /* Card.swift in Sources */,
+				31C9C12F1FF3105F004F306E /* TestTableViewCell.swift in Sources */,
 				31C9C11C1FF23A5A004F306E /* PlayerHandField.swift in Sources */,
+				31C9C1281FF24FD5004F306E /* InitialSettingViewController.swift in Sources */,
+				31C9C12B1FF305D8004F306E /* TestCustomView.swift in Sources */,
 				31C9C1031FF23687004F306E /* AppDelegate.swift in Sources */,
 				31C9C1221FF2449E004F306E /* Player.swift in Sources */,
 				31C9C11E1FF23A71004F306E /* PlayerField.swift in Sources */,

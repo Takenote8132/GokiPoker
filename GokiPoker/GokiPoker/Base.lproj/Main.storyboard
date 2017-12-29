@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vde-Lg-sfo">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GokiPoker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -19,6 +23,132 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1054" y="34"/>
+        </scene>
+        <!--Initial Setting View Controller-->
+        <scene sceneID="teK-QK-ecy">
+            <objects>
+                <viewController id="vde-Lg-sfo" customClass="InitialSettingViewController" customModule="GokiPoker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fvi-XF-qSD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7NJ-Q4-Nir">
+                                <rect key="frame" x="24" y="44" width="327" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ZV-OT-npI">
+                                <rect key="frame" x="24" y="65" width="327" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="160" id="HDj-U2-w6J"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="vde-Lg-sfo" id="jP3-uI-Zhk"/>
+                                    <outlet property="delegate" destination="vde-Lg-sfo" id="Lqi-Qa-bN7"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="saR-dO-eee">
+                                <rect key="frame" x="24" y="281" width="327" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R4i-jo-o8I" customClass="TestCustomView" customModule="GokiPoker" customModuleProvider="target">
+                                <rect key="frame" x="24" y="326" width="327" height="36"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="YAz-dF-t5u"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pat-h5-gsq" customClass="TestCustomView" customModule="GokiPoker" customModuleProvider="target">
+                                <rect key="frame" x="24" y="370" width="327" height="36"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="f4n-IF-Mdi"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XFi-E2-fCX" customClass="TestCustomView" customModule="GokiPoker" customModuleProvider="target">
+                                <rect key="frame" x="24" y="414" width="327" height="36"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="v2X-Le-bGZ"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PNs-sJ-I0h" customClass="TestCustomView" customModule="GokiPoker" customModuleProvider="target">
+                                <rect key="frame" x="23.5" y="458" width="327" height="36"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="1dL-9t-gup"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YTg-gE-h3o" customClass="TestCustomView" customModule="GokiPoker" customModuleProvider="target">
+                                <rect key="frame" x="23.5" y="502" width="327" height="36"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="efS-OU-WK6"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ta7-Td-JAg" customClass="TestCustomView" customModule="GokiPoker" customModuleProvider="target">
+                                <rect key="frame" x="23.5" y="546" width="327" height="36"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="wDW-IM-nxp"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="saR-dO-eee" firstAttribute="centerX" secondItem="2ZV-OT-npI" secondAttribute="centerX" id="26D-35-Oht"/>
+                            <constraint firstItem="YTg-gE-h3o" firstAttribute="width" secondItem="PNs-sJ-I0h" secondAttribute="width" id="2cm-R3-if2"/>
+                            <constraint firstItem="Ta7-Td-JAg" firstAttribute="width" secondItem="YTg-gE-h3o" secondAttribute="width" id="2eG-hv-jRH"/>
+                            <constraint firstItem="YTg-gE-h3o" firstAttribute="top" secondItem="PNs-sJ-I0h" secondAttribute="bottom" constant="8" id="4Zp-Z0-ZQZ"/>
+                            <constraint firstItem="7NJ-Q4-Nir" firstAttribute="top" secondItem="lHG-JA-zpx" secondAttribute="top" constant="24" id="5Nl-Vi-Tzs"/>
+                            <constraint firstItem="XFi-E2-fCX" firstAttribute="top" secondItem="Pat-h5-gsq" secondAttribute="bottom" constant="8" id="Bz6-pq-3gz"/>
+                            <constraint firstItem="R4i-jo-o8I" firstAttribute="width" secondItem="saR-dO-eee" secondAttribute="width" id="C6v-p1-pVU"/>
+                            <constraint firstItem="2ZV-OT-npI" firstAttribute="top" secondItem="7NJ-Q4-Nir" secondAttribute="bottom" id="EbB-h2-4fa"/>
+                            <constraint firstItem="XFi-E2-fCX" firstAttribute="width" secondItem="Pat-h5-gsq" secondAttribute="width" id="HI0-cg-UgO"/>
+                            <constraint firstItem="7NJ-Q4-Nir" firstAttribute="leading" secondItem="lHG-JA-zpx" secondAttribute="leading" constant="24" id="K52-OE-Het"/>
+                            <constraint firstItem="saR-dO-eee" firstAttribute="width" secondItem="2ZV-OT-npI" secondAttribute="width" id="LqH-0i-wL4"/>
+                            <constraint firstItem="Pat-h5-gsq" firstAttribute="top" secondItem="R4i-jo-o8I" secondAttribute="bottom" constant="8" id="QRI-2i-zfX"/>
+                            <constraint firstItem="R4i-jo-o8I" firstAttribute="top" secondItem="saR-dO-eee" secondAttribute="bottom" constant="24" id="RFv-d7-Al9"/>
+                            <constraint firstItem="PNs-sJ-I0h" firstAttribute="centerX" secondItem="XFi-E2-fCX" secondAttribute="centerX" id="SCp-op-otw"/>
+                            <constraint firstItem="PNs-sJ-I0h" firstAttribute="width" secondItem="XFi-E2-fCX" secondAttribute="width" id="WtI-nq-HdD"/>
+                            <constraint firstItem="Pat-h5-gsq" firstAttribute="trailing" secondItem="XFi-E2-fCX" secondAttribute="trailing" id="bAJ-Zh-uVD"/>
+                            <constraint firstItem="lHG-JA-zpx" firstAttribute="trailing" secondItem="7NJ-Q4-Nir" secondAttribute="trailing" constant="24" id="coN-no-o8e"/>
+                            <constraint firstItem="2ZV-OT-npI" firstAttribute="centerX" secondItem="7NJ-Q4-Nir" secondAttribute="centerX" id="dRx-r3-Ct8"/>
+                            <constraint firstItem="XFi-E2-fCX" firstAttribute="centerX" secondItem="Pat-h5-gsq" secondAttribute="centerX" id="eDD-Tr-sXZ"/>
+                            <constraint firstItem="Pat-h5-gsq" firstAttribute="leading" secondItem="XFi-E2-fCX" secondAttribute="leading" id="gUN-jz-Kgu"/>
+                            <constraint firstItem="Ta7-Td-JAg" firstAttribute="centerX" secondItem="YTg-gE-h3o" secondAttribute="centerX" id="kKT-4T-Yqh"/>
+                            <constraint firstItem="saR-dO-eee" firstAttribute="top" secondItem="2ZV-OT-npI" secondAttribute="bottom" id="nlN-AH-CVq"/>
+                            <constraint firstItem="PNs-sJ-I0h" firstAttribute="top" secondItem="XFi-E2-fCX" secondAttribute="bottom" constant="8" id="oAx-Rd-pG4"/>
+                            <constraint firstItem="Pat-h5-gsq" firstAttribute="width" secondItem="R4i-jo-o8I" secondAttribute="width" id="q9H-2K-EAR"/>
+                            <constraint firstItem="Ta7-Td-JAg" firstAttribute="top" secondItem="YTg-gE-h3o" secondAttribute="bottom" constant="8" id="qnj-pg-uZM"/>
+                            <constraint firstItem="R4i-jo-o8I" firstAttribute="leading" secondItem="saR-dO-eee" secondAttribute="leading" id="tOI-2L-1uC"/>
+                            <constraint firstItem="Pat-h5-gsq" firstAttribute="centerX" secondItem="R4i-jo-o8I" secondAttribute="centerX" id="toV-O4-DcZ"/>
+                            <constraint firstItem="2ZV-OT-npI" firstAttribute="width" secondItem="7NJ-Q4-Nir" secondAttribute="width" id="uGG-KT-MPm"/>
+                            <constraint firstItem="XFi-E2-fCX" firstAttribute="leading" secondItem="Pat-h5-gsq" secondAttribute="leading" id="uod-RX-MJf"/>
+                            <constraint firstItem="YTg-gE-h3o" firstAttribute="centerX" secondItem="PNs-sJ-I0h" secondAttribute="centerX" id="ztY-LW-kJV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lHG-JA-zpx"/>
+                    </view>
+                    <connections>
+                        <outlet property="belowPickerLabel" destination="saR-dO-eee" id="sva-8o-TvU"/>
+                        <outlet property="nameInputView0" destination="R4i-jo-o8I" id="cLU-AR-lpO"/>
+                        <outlet property="nameInputView1" destination="Pat-h5-gsq" id="CZ0-4v-e3K"/>
+                        <outlet property="nameInputView2" destination="XFi-E2-fCX" id="Mi1-dK-D8N"/>
+                        <outlet property="nameInputView3" destination="PNs-sJ-I0h" id="3fT-d5-we9"/>
+                        <outlet property="nameInputView4" destination="YTg-gE-h3o" id="u5E-el-ub8"/>
+                        <outlet property="nameInputView5" destination="Ta7-Td-JAg" id="oyI-9W-Uuc"/>
+                        <outlet property="numOfPlayersPicker" destination="2ZV-OT-npI" id="00F-9e-FBA"/>
+                        <outlet property="onPickerLabel" destination="7NJ-Q4-Nir" id="GBf-FP-TWe"/>
+                        <outlet property="pickerView" destination="2ZV-OT-npI" id="cCI-yL-cvw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xm9-Wg-gOj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="300" y="33.733133433283363"/>
         </scene>
     </scenes>
 </document>
