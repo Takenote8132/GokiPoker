@@ -23,6 +23,8 @@
 		31C9C12B1FF305D8004F306E /* TestCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C9C12A1FF305D8004F306E /* TestCustomView.swift */; };
 		31C9C12D1FF305F2004F306E /* TestCustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31C9C12C1FF305F2004F306E /* TestCustomView.xib */; };
 		31C9C12F1FF3105F004F306E /* TestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C9C12E1FF3105F004F306E /* TestTableViewCell.swift */; };
+		31C9C1311FF65DE8004F306E /* PlayerFieldCustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31C9C1301FF65DE8004F306E /* PlayerFieldCustomView.xib */; };
+		31C9C1351FF66463004F306E /* PlayerFieldCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C9C1341FF66463004F306E /* PlayerFieldCustomView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		31C9C12A1FF305D8004F306E /* TestCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCustomView.swift; sourceTree = "<group>"; };
 		31C9C12C1FF305F2004F306E /* TestCustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestCustomView.xib; sourceTree = "<group>"; };
 		31C9C12E1FF3105F004F306E /* TestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableViewCell.swift; sourceTree = "<group>"; };
+		31C9C1301FF65DE8004F306E /* PlayerFieldCustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerFieldCustomView.xib; sourceTree = "<group>"; };
+		31C9C1341FF66463004F306E /* PlayerFieldCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerFieldCustomView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,8 @@
 				31C9C12A1FF305D8004F306E /* TestCustomView.swift */,
 				31C9C12C1FF305F2004F306E /* TestCustomView.xib */,
 				31C9C12E1FF3105F004F306E /* TestTableViewCell.swift */,
+				31C9C1341FF66463004F306E /* PlayerFieldCustomView.swift */,
+				31C9C1301FF65DE8004F306E /* PlayerFieldCustomView.xib */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -173,6 +179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				31C9C10D1FF23687004F306E /* LaunchScreen.storyboard in Resources */,
+				31C9C1311FF65DE8004F306E /* PlayerFieldCustomView.xib in Resources */,
 				31C9C12D1FF305F2004F306E /* TestCustomView.xib in Resources */,
 				31C9C10A1FF23687004F306E /* Assets.xcassets in Resources */,
 				31C9C1081FF23687004F306E /* Main.storyboard in Resources */,
@@ -186,6 +193,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31C9C1351FF66463004F306E /* PlayerFieldCustomView.swift in Sources */,
 				31C9C1201FF24432004F306E /* GameField.swift in Sources */,
 				31C9C1181FF23A00004F306E /* Deck.swift in Sources */,
 				31C9C1051FF23687004F306E /* ViewController.swift in Sources */,

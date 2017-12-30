@@ -25,6 +25,7 @@ class InitialSettingViewController: UIViewController, UIPickerViewDelegate, UIPi
     
     let numOfPlayer: [[Int]] = [[2,3,4,5,6]]
     var inputNanmeViews: [TestCustomView] = []
+    var names: [String] = []
     var now: Int = 2
     
     override func viewDidLoad() {
@@ -50,36 +51,23 @@ class InitialSettingViewController: UIViewController, UIPickerViewDelegate, UIPi
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+//MARK: - Segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if (segue.identifier == "toNextSegue") {
+            print("toNextSegue")
+            for i in 0 ..< now{
+                if(inputNanmeViews[i].textView.text != ""){
+                    names.append(inputNanmeViews[i].textView.text!)
+                }else{
+                    names.append("player"+String(i+1))
+                }
+            }
+            print(names.description)
+            let vc: ViewController = segue.destination as! ViewController
+            vc.playerNames = self.names
+        }
     }
-    */
-
-////MARK: - UI TableView
-//    /// セルの個数を指定するデリゲートメソッド（必須）
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return now
-//    }
-//
-//    /// セルに値を設定するデータソースメソッド（必須）
-//    internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell: TestTableViewCell = tableView.dequeueReusableCell(withIdentifier: "TestCustomCell", for: indexPath as IndexPath) as! TestTableViewCell
-//        // セルに表示する値を設定する
-//        cell.testCustomView.leftLabel.text = "Player" + indexPath.row.description + ": "
-//        return cell
-//    }
-//
-//    /// セルが選択された時に呼ばれるデリゲートメソッド
-//    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {}
-//
-//
-//
+    
 //MARK: - UIPickerView
     //コンポーネントの個数を返すメソッド
     @IBOutlet weak var numOfPlayersPicker: UIPickerView!
@@ -99,6 +87,7 @@ class InitialSettingViewController: UIViewController, UIPickerViewDelegate, UIPi
 
     //データ選択時の呼び出しメソッド
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        now = numOfPlayer[component][row]
         showOrHideNameInputView(component: component, row: row)
     }
     

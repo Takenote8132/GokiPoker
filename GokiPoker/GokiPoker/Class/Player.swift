@@ -32,4 +32,12 @@ extension Player{
     func addCardToField(card: Card){
         field.cardsInField.append(card)
     }
+    
+    func showHand() -> String {
+        return hand.showAll()
+    }
+    
+    func showField() -> String {
+        return field.showAll()
+    }
 }

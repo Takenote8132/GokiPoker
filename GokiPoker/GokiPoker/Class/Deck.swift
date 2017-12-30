@@ -43,7 +43,7 @@ extension Deck{
         var tempCard: Card
         var rndInt: Int
         for i in 0 ..< cards.count{
-            rndInt = Deck.random(min: 0, max: cards.count)
+            rndInt = Deck.random(min: 0, max: (cards.count-1) )
             tempCard = cards[i]
             cards[i] = cards[rndInt]
             cards[rndInt] = tempCard

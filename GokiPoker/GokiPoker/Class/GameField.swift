@@ -10,14 +10,16 @@ import Foundation
 
 //MARK: - Main
 class GameField {
-    private var players: [Player] = []
+    let players: [Player]
     private let deck: Deck
     private let numOfInitHand = 7
     
     init(namesOfPlayers: [String]) {
+        var playersHoge:[Player] = []
         for i in 0 ..< namesOfPlayers.count{
-            players.append(Player(index: i, name: namesOfPlayers[i]))
+            playersHoge.append(Player(index: i, name: namesOfPlayers[i]))
         }
+        players = playersHoge
         deck = Deck(numOfDeck: 49)
         destributeCardsToPlayersFromDeck()
     }
@@ -34,5 +36,4 @@ extension GameField{
             }
         }
     }
-    
 }
