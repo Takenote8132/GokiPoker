@@ -29,70 +29,160 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jc3-wZ-nn0" customClass="PlayerFieldCustomView" customModule="GokiPoker" customModuleProvider="target">
                                 <rect key="frame" x="34" y="44" width="317" height="97"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" id="xgu-NV-I5X"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="xgu-NV-I5X"/>
+                                    </mask>
+                                </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x2s-I4-UCo" customClass="PlayerFieldCustomView" customModule="GokiPoker" customModuleProvider="target">
-                                <rect key="frame" x="34" y="149" width="317" height="64.5"/>
+                                <rect key="frame" x="34" y="149" width="317" height="65.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jH1-Xp-gK5" customClass="PlayerFieldCustomView" customModule="GokiPoker" customModuleProvider="target">
-                                <rect key="frame" x="34" y="221.5" width="317" height="64.5"/>
+                                <rect key="frame" x="34" y="222.5" width="317" height="64.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" id="p3z-is-1Wz"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="p3z-is-1Wz"/>
+                                    </mask>
+                                </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L6N-eZ-xim" customClass="PlayerFieldCustomView" customModule="GokiPoker" customModuleProvider="target">
-                                <rect key="frame" x="34" y="294" width="317" height="64.5"/>
+                                <rect key="frame" x="34" y="295" width="317" height="64.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" id="JE5-de-Wa0"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="JE5-de-Wa0"/>
+                                    </mask>
+                                </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Ib-3g-ZC2" customClass="PlayerFieldCustomView" customModule="GokiPoker" customModuleProvider="target">
-                                <rect key="frame" x="34" y="366.5" width="317" height="64.5"/>
+                                <rect key="frame" x="34" y="367.5" width="317" height="65"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" id="4Ye-gF-alJ"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="4Ye-gF-alJ"/>
+                                    </mask>
+                                </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZIk-6E-6Ry" customClass="PlayerFieldCustomView" customModule="GokiPoker" customModuleProvider="target">
-                                <rect key="frame" x="34" y="439" width="317" height="64.5"/>
+                                <rect key="frame" x="34" y="440.5" width="317" height="65"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" id="o6q-5z-zZf"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="o6q-5z-zZf"/>
+                                    </mask>
+                                </variation>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F44-ie-HZM">
-                                <rect key="frame" x="34" y="511.5" width="317" height="131.5"/>
+                                <rect key="frame" x="34" y="513.5" width="317" height="129.5"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="testAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Idn-oX-gIa"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="F44-ie-HZM" secondAttribute="bottom" constant="24" id="1nL-eY-UVC"/>
                             <constraint firstItem="jH1-Xp-gK5" firstAttribute="width" secondItem="x2s-I4-UCo" secondAttribute="width" id="29X-kO-sEi"/>
+                            <constraint firstItem="L6N-eZ-xim" firstAttribute="height" secondItem="7EJ-Lj-U88" secondAttribute="height" multiplier="0.125" id="38r-7g-6lA"/>
                             <constraint firstItem="L6N-eZ-xim" firstAttribute="leading" secondItem="jH1-Xp-gK5" secondAttribute="leading" id="3Sg-7A-CWM"/>
                             <constraint firstItem="6Ib-3g-ZC2" firstAttribute="leading" secondItem="L6N-eZ-xim" secondAttribute="leading" id="45O-zV-jAh"/>
                             <constraint firstItem="jH1-Xp-gK5" firstAttribute="height" secondItem="7EJ-Lj-U88" secondAttribute="height" multiplier="0.1" id="46I-O7-lkD"/>
                             <constraint firstItem="Jc3-wZ-nn0" firstAttribute="leading" secondItem="7EJ-Lj-U88" secondAttribute="trailing" constant="24" id="718-jh-DWY"/>
                             <constraint firstItem="6Ib-3g-ZC2" firstAttribute="width" secondItem="L6N-eZ-xim" secondAttribute="width" id="7wo-iz-p3I"/>
                             <constraint firstItem="L6N-eZ-xim" firstAttribute="height" secondItem="7EJ-Lj-U88" secondAttribute="height" multiplier="0.1" id="Ai5-3i-WvG"/>
+                            <constraint firstItem="F44-ie-HZM" firstAttribute="width" secondItem="Jc3-wZ-nn0" secondAttribute="width" id="BAw-tg-muZ"/>
                             <constraint firstItem="L6N-eZ-xim" firstAttribute="width" secondItem="jH1-Xp-gK5" secondAttribute="width" id="DB7-oD-eKW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7EJ-Lj-U88" secondAttribute="bottom" id="E0U-xa-fpP"/>
-                            <constraint firstItem="F44-ie-HZM" firstAttribute="width" secondItem="ZIk-6E-6Ry" secondAttribute="width" id="Fte-th-9Rz"/>
                             <constraint firstItem="Jc3-wZ-nn0" firstAttribute="height" secondItem="7EJ-Lj-U88" secondAttribute="height" multiplier="0.15" id="IAR-uk-5co"/>
-                            <constraint firstItem="F44-ie-HZM" firstAttribute="top" secondItem="ZIk-6E-6Ry" secondAttribute="bottom" constant="8" id="J8H-BA-hqQ"/>
-                            <constraint firstItem="F44-ie-HZM" firstAttribute="leading" secondItem="ZIk-6E-6Ry" secondAttribute="leading" id="JNS-fy-VEk"/>
                             <constraint firstItem="ZIk-6E-6Ry" firstAttribute="leading" secondItem="6Ib-3g-ZC2" secondAttribute="leading" id="Ldr-ow-TYH"/>
+                            <constraint firstItem="x2s-I4-UCo" firstAttribute="height" secondItem="7EJ-Lj-U88" secondAttribute="height" multiplier="0.25" id="Ll0-vi-E1Z"/>
                             <constraint firstItem="x2s-I4-UCo" firstAttribute="height" secondItem="7EJ-Lj-U88" secondAttribute="height" multiplier="0.1" id="ML2-2w-VDK"/>
                             <constraint firstItem="6Ib-3g-ZC2" firstAttribute="height" secondItem="7EJ-Lj-U88" secondAttribute="height" multiplier="0.1" id="N1O-Xq-Ojx"/>
+                            <constraint firstItem="L6N-eZ-xim" firstAttribute="height" secondItem="7EJ-Lj-U88" secondAttribute="height" multiplier="0.166" id="Ndp-LP-xsF"/>
+                            <constraint firstItem="F44-ie-HZM" firstAttribute="trailing" secondItem="Jc3-wZ-nn0" secondAttribute="trailing" id="OE3-oG-846"/>
+                            <constraint firstItem="x2s-I4-UCo" firstAttribute="height" secondItem="7EJ-Lj-U88" secondAttribute="height" multiplier="0.166" id="PuO-da-oKl"/>
                             <constraint firstItem="x2s-I4-UCo" firstAttribute="top" secondItem="Jc3-wZ-nn0" secondAttribute="bottom" constant="8" id="PxS-FP-om3"/>
+                            <constraint firstItem="F44-ie-HZM" firstAttribute="height" secondItem="7EJ-Lj-U88" secondAttribute="height" multiplier="0.2" id="Szy-yG-USg"/>
                             <constraint firstItem="ZIk-6E-6Ry" firstAttribute="top" secondItem="6Ib-3g-ZC2" secondAttribute="bottom" constant="8" id="ToW-iF-6oH"/>
                             <constraint firstItem="x2s-I4-UCo" firstAttribute="width" secondItem="Jc3-wZ-nn0" secondAttribute="width" id="UVN-aF-aD8"/>
                             <constraint firstItem="jH1-Xp-gK5" firstAttribute="top" secondItem="x2s-I4-UCo" secondAttribute="bottom" constant="8" id="Vei-4k-RgP"/>
+                            <constraint firstItem="jH1-Xp-gK5" firstAttribute="height" secondItem="7EJ-Lj-U88" secondAttribute="height" multiplier="0.125" id="awK-tl-UKX"/>
+                            <constraint firstItem="6Ib-3g-ZC2" firstAttribute="height" secondItem="7EJ-Lj-U88" secondAttribute="height" multiplier="0.125" id="fIc-7a-hBD"/>
                             <constraint firstItem="6Ib-3g-ZC2" firstAttribute="top" secondItem="L6N-eZ-xim" secondAttribute="bottom" constant="8" id="fIv-Pp-CJF"/>
                             <constraint firstItem="Jc3-wZ-nn0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="fK4-Qr-hXv"/>
+                            <constraint firstItem="jH1-Xp-gK5" firstAttribute="height" secondItem="7EJ-Lj-U88" secondAttribute="height" multiplier="0.25" id="gug-WH-gAk"/>
+                            <constraint firstItem="F44-ie-HZM" firstAttribute="leading" secondItem="Jc3-wZ-nn0" secondAttribute="leading" id="hxd-ug-Jbm"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="F44-ie-HZM" secondAttribute="bottom" constant="24" id="idZ-i2-jOc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Jc3-wZ-nn0" secondAttribute="trailing" constant="24" id="ifc-MT-qlS"/>
                             <constraint firstItem="L6N-eZ-xim" firstAttribute="top" secondItem="jH1-Xp-gK5" secondAttribute="bottom" constant="8" id="jCR-9T-tnU"/>
+                            <constraint firstItem="x2s-I4-UCo" firstAttribute="height" secondItem="7EJ-Lj-U88" secondAttribute="height" multiplier="0.125" id="mAu-EZ-owc"/>
                             <constraint firstItem="7EJ-Lj-U88" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qAP-fR-HWs"/>
+                            <constraint firstItem="jH1-Xp-gK5" firstAttribute="height" secondItem="7EJ-Lj-U88" secondAttribute="height" multiplier="0.166" id="rNa-tL-z4s"/>
                             <constraint firstItem="7EJ-Lj-U88" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="rrt-Kd-Cty"/>
                             <constraint firstItem="ZIk-6E-6Ry" firstAttribute="width" secondItem="6Ib-3g-ZC2" secondAttribute="width" id="w6G-Ag-t9N"/>
+                            <constraint firstItem="x2s-I4-UCo" firstAttribute="height" secondItem="7EJ-Lj-U88" secondAttribute="height" multiplier="0.25" id="w7o-5c-gTf"/>
                             <constraint firstItem="jH1-Xp-gK5" firstAttribute="leading" secondItem="x2s-I4-UCo" secondAttribute="leading" id="wiE-s5-xz1"/>
                             <constraint firstItem="x2s-I4-UCo" firstAttribute="leading" secondItem="Jc3-wZ-nn0" secondAttribute="leading" id="yXC-6f-Yyn"/>
                             <constraint firstItem="ZIk-6E-6Ry" firstAttribute="height" secondItem="7EJ-Lj-U88" secondAttribute="height" multiplier="0.1" id="yXu-sU-DJ2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Ll0-vi-E1Z"/>
+                                <exclude reference="PuO-da-oKl"/>
+                                <exclude reference="mAu-EZ-owc"/>
+                                <exclude reference="w7o-5c-gTf"/>
+                                <exclude reference="awK-tl-UKX"/>
+                                <exclude reference="gug-WH-gAk"/>
+                                <exclude reference="rNa-tL-z4s"/>
+                                <exclude reference="38r-7g-6lA"/>
+                                <exclude reference="Ndp-LP-xsF"/>
+                                <exclude reference="fIc-7a-hBD"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="btn" destination="F44-ie-HZM" id="hUP-Cg-lYN"/>
+                        <outlet property="constFiveforSix" destination="yXu-sU-DJ2" id="QZI-SF-pSb"/>
+                        <outlet property="constFiveforZero" destination="o6q-5z-zZf" id="Emf-m3-pGA"/>
+                        <outlet property="constForforZero" destination="4Ye-gF-alJ" id="KHo-GQ-Z65"/>
+                        <outlet property="constFourforFive" destination="fIc-7a-hBD" id="oEZ-4M-ZuV"/>
+                        <outlet property="constFourforSix" destination="N1O-Xq-Ojx" id="4II-B5-rRf"/>
+                        <outlet property="constOneforFive" destination="mAu-EZ-owc" id="nnu-vx-lIP"/>
+                        <outlet property="constOneforFour" destination="PuO-da-oKl" id="X5Q-X6-dpz"/>
+                        <outlet property="constOneforSix" destination="ML2-2w-VDK" id="oNa-fc-Hxx"/>
+                        <outlet property="constOneforThree" destination="Ll0-vi-E1Z" id="RPr-JE-rBL"/>
+                        <outlet property="constOneforTwo" destination="w7o-5c-gTf" id="tqa-0w-ceH"/>
+                        <outlet property="constThreeforFive" destination="38r-7g-6lA" id="KMW-Zj-BHk"/>
+                        <outlet property="constThreeforFour" destination="Ndp-LP-xsF" id="YjI-VE-s7C"/>
+                        <outlet property="constThreeforSix" destination="Ai5-3i-WvG" id="NdH-Q3-JAF"/>
+                        <outlet property="constThreeforZero" destination="JE5-de-Wa0" id="zOE-Vd-wll"/>
+                        <outlet property="constTopForDefault" destination="IAR-uk-5co" id="BvJ-sM-T0P"/>
+                        <outlet property="constTopForZero" destination="xgu-NV-I5X" id="fpg-L6-Tez"/>
+                        <outlet property="constTowforzero" destination="p3z-is-1Wz" id="dBD-HU-STD"/>
+                        <outlet property="constTwoforFive" destination="awK-tl-UKX" id="cyU-wT-pHI"/>
+                        <outlet property="constTwoforFour" destination="rNa-tL-z4s" id="Z1o-5Q-RYk"/>
+                        <outlet property="constTwoforSix" destination="46I-O7-lkD" id="VpB-gQ-UL2"/>
+                        <outlet property="constTwoforThree" destination="gug-WH-gAk" id="avV-re-Ro8"/>
                         <outlet property="customView0" destination="Jc3-wZ-nn0" id="Rec-Py-XR1"/>
                         <outlet property="customView1" destination="x2s-I4-UCo" id="ild-xK-HcQ"/>
                         <outlet property="customView2" destination="jH1-Xp-gK5" id="Mcu-pK-78F"/>
