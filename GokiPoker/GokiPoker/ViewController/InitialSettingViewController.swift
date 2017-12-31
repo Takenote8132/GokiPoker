@@ -63,7 +63,8 @@ class InitialSettingViewController: UIViewController, UIPickerViewDelegate, UIPi
                 }
             }
             print(names.description)
-            let vc: ViewController = segue.destination as! ViewController
+            //let vc: ViewController = segue.destination as! ViewController
+            let vc: GameViewController = segue.destination as! GameViewController
             vc.playerNames = self.names
         }
     }

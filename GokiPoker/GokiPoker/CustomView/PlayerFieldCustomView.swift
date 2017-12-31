@@ -10,7 +10,6 @@ import UIKit
 
 class PlayerFieldCustomView: UIView {
 
-    
     @IBOutlet weak var playerNameLabel: UILabel!
     @IBOutlet weak var numOfHandLabel: UILabel!
     @IBOutlet weak var field0: UILabel!
@@ -21,6 +20,7 @@ class PlayerFieldCustomView: UIView {
     @IBOutlet weak var field5: UILabel!
     @IBOutlet weak var field6: UILabel!
     
+    var name: String = "PlayerFieldCustomView"
     
     //コードから生成したときに通る初期化処理
     override init(frame: CGRect) {
@@ -40,15 +40,11 @@ class PlayerFieldCustomView: UIView {
         guard let view = UINib(nibName: "PlayerFieldCustomView", bundle: nil).instantiate(withOwner: self, options: nil).first as? UIView else {
             return
         }
-        
         //ここでちゃんとあわせておかないと、配置したUIButtonがタッチイベントを拾えなかったりする。
         view.frame = self.bounds
-        
         //伸縮するように
         view.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-        
         //addする。viewオブジェクトの2枚重ねになる。
         self.addSubview(view)
     }
-
 }

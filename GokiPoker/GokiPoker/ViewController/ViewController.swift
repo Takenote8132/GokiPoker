@@ -8,8 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController{
     
     @IBOutlet weak var customView0: PlayerFieldCustomView!
     @IBOutlet weak var customView1: PlayerFieldCustomView!
@@ -17,7 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var customView3: PlayerFieldCustomView!
     @IBOutlet weak var customView4: PlayerFieldCustomView!
     @IBOutlet weak var customView5: PlayerFieldCustomView!
-    
+    var customViews: [PlayerFieldCustomView] = []
     
     @IBOutlet weak var constTopForZero: NSLayoutConstraint!
     @IBOutlet weak var constTopForDefault: NSLayoutConstraint!
@@ -50,9 +49,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var btn: UIButton!
     
     
-    var customViews: [PlayerFieldCustomView] = []
+    
     var playerNames: [String] = []
     var gameField: GameField?
+    var thisIsTwice = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,23 +71,11 @@ class ViewController: UIViewController {
             changeSizeFor(at: gf.players.count)
         }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
-    @IBAction func testAction(_ sender: Any) {
-        customView2.removeFromSuperview()
-        customView3.removeFromSuperview()
-        customView4.removeFromSuperview()
-        customView5.removeFromSuperview()
-        NSLayoutConstraint.activate([constOneforTwo])
-        NSLayoutConstraint.deactivate([constOneforSix])
-    }
-    
-    
 }
 
 //MARK: - Function
