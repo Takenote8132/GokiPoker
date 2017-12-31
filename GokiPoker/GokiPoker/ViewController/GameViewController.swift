@@ -13,13 +13,17 @@ class GameViewController: UIViewController, UIPageViewControllerDataSource  {
     
     @IBOutlet weak var customView0: PlayerFieldCustomView!
     
-    var vcArray: [PlayersPagerViewController] = []
+    var vcArray: [ViewController] = []
     var pageViewController: UIPageViewController?
     
     var playerNames: [String] = []
     var gameField: GameField?
     var thisIsTwice = false
-
+    var now: Int = 0
+    
+    var vc: PlayersPagerViewController?
+    var vc2: TargetSelectViewController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("debug_viewDidLoad()_GameViewController")
@@ -32,20 +36,19 @@ class GameViewController: UIViewController, UIPageViewControllerDataSource  {
     override func viewWillLayoutSubviews() {
         if(thisIsTwice){
             print("debug_viewWillLayoutSubviews()_GameViewController_twice")
-                vcArray[0].removeViewFrom(at: vcArray[0].names.count)
+            vc?.removeViewFrom(at: playerNames.count)
         }else{
             super.viewWillLayoutSubviews()
             print("debug_viewWillLayoutSubviews()_GameViewController")
-                let vc = storyboard?.instantiateViewController(withIdentifier: "PlayersPagerViewController") as! PlayersPagerViewController
-                vc.names = playerNames
-                vcArray.append(vc)
+            vc = storyboard?.instantiateViewController(withIdentifier: "PlayersPagerViewController") as? PlayersPagerViewController
+            vc?.names = playerNames
             
-                let vc = storyboard?.instantiateViewController(withIdentifier: "TargetSelectViewController") as! TargetSelectViewController
-                vc.tempStr = "This is second View"
-                vcArray.append(vc)
+            vc2 = storyboard?.instantiateViewController(withIdentifier: "TargetSelectViewController") as? TargetSelectViewController
+            vc2?.tempStr = "This is second View"
+            
             pageViewController = childViewControllers[0] as? UIPageViewController// ContainerView に Embed した UIPageViewController を取得する
             pageViewController!.dataSource = self// dataSource を設定する
-            pageViewController!.setViewControllers([vcArray[0]], direction: .forward, animated: false, completion: nil)// 最初に表示する配列の先頭の ViewController を設定
+            pageViewController!.setViewControllers([vc!], direction: .forward, animated: false, completion: nil)// 最初に表示する配列の先頭の ViewController を設定
             thisIsTwice = true
         }
     }
@@ -61,16 +64,20 @@ extension GameViewController{
     //MARK: - Func For Pager
     // 逆方向にページ送りした時に呼ばれるメソッド
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        guard let index = vcArray.index(of: viewController as! PlayersPagerViewController), index > 0 else {
+        if(now == 1){
+            now = 0
+            return vc
+        }else{
             return nil
         }
-        return vcArray[index - 1]
     }
     // 順方向にページ送りした時に呼ばれるメソッド
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        guard let index = vcArray.index(of: viewController as! PlayersPagerViewController), index < vcArray.count - 1 else {
+        if(now == 0){
+            now = 1
+            return vc2
+        }else{
             return nil
         }
-        return vcArray[index + 1]
     }
 }

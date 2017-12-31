@@ -190,7 +190,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1053.5999999999999" y="33.733133433283363"/>
+            <point key="canvasLocation" x="1177" y="-824"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="wa2-1b-nTv">
@@ -214,6 +214,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4JN-uB-WQM">
                                 <rect key="frame" x="24" y="546" width="327" height="97"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="vde-Lg-sfo" kind="show" id="heR-wD-MSf"/>
+                                </connections>
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1io-ei-qBA">
                                 <rect key="frame" x="24" y="149" width="327" height="388"/>
@@ -248,7 +251,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="COQ-70-XA1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1054" y="717"/>
+            <point key="canvasLocation" x="1073" y="34"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="6sP-3q-gCg">
@@ -256,7 +259,7 @@
                 <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="Tt1-Xl-bP8" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LEj-AM-d3Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1823" y="716"/>
+            <point key="canvasLocation" x="1972" y="33"/>
         </scene>
         <!--Players Pager View Controller-->
         <scene sceneID="NcJ-nA-6hm">
@@ -373,7 +376,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9hN-2i-ztw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2705" y="716"/>
+            <point key="canvasLocation" x="2010" y="849"/>
         </scene>
         <!--Target Select View Controller-->
         <scene sceneID="R6V-PN-vos">
@@ -400,7 +403,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QyZ-YL-FOd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3518" y="716"/>
+            <point key="canvasLocation" x="2841" y="849"/>
         </scene>
         <!--Initial Setting View Controller-->
         <scene sceneID="teK-QK-ecy">
@@ -538,7 +541,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xm9-Wg-gOj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="300" y="33.733133433283363"/>
+            <point key="canvasLocation" x="-95" y="34"/>
         </scene>
     </scenes>
 </document>
