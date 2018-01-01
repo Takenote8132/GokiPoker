@@ -39,6 +39,7 @@ class PlayersPagerViewController: UIViewController {
     @IBOutlet weak var const4for6: NSLayoutConstraint!
     
     var names: [String] = []
+    var gameField: GameField?
     var customViews: [PlayerFieldCustomView] = []
     var constrains = [[NSLayoutConstraint]]()
     
@@ -47,12 +48,12 @@ class PlayersPagerViewController: UIViewController {
         print("debug_viewDidLoad_PlayerPagerViewController")
         constrains = [[const0for2,const0ror3, const0for4, const0for5, const0for6], [dammyConst, const1for3, const1for4, const1for5, const1for6], [dammyConst,dammyConst, const2for4, const2for5, const2for6], [dammyConst, dammyConst, dammyConst, const3for5, const3for6], [dammyConst,dammyConst,dammyConst,dammyConst, const4for6]]
         customViews = [playerFieldView0, playerFieldView1, playerFieldView2, playerFieldView3, playerFieldView4]
-        reloadViewTexts()
+        reloadViewTexts(gf: gameField!)
     }
     
     override func viewDidLayoutSubviews() {
-        removeViewFrom(at: (names.count-1))
-        addaptSizeFor(num: (names.count-1))
+        removeViewFrom(at: ((gameField?.getNameArray().count)!-1))
+        addaptSizeFor(num: ((gameField?.getNameArray().count)!-1))
     }
     
     override func didReceiveMemoryWarning() {
@@ -63,8 +64,8 @@ class PlayersPagerViewController: UIViewController {
 //MARK: - Function
 extension PlayersPagerViewController{
     //MARK: - reload view texts
-    func reloadViewTexts(){
-        var namesForHere = names
+    func reloadViewTexts(gf: GameField){
+        var namesForHere = gf.getNameArray()
         namesForHere.removeFirst()
         for i in 0 ..< namesForHere.count{
             customViews[i].playerNameLabel.text = namesForHere[i]

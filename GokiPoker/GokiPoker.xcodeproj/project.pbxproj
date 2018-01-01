@@ -10,6 +10,7 @@
 		3151085B1FF880AC0051A394 /* PlayersPagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3151085A1FF880AC0051A394 /* PlayersPagerViewController.swift */; };
 		3151085D1FF88CB30051A394 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3151085C1FF88CB30051A394 /* GameViewController.swift */; };
 		315108601FF915450051A394 /* TargetSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3151085F1FF915450051A394 /* TargetSelectViewController.swift */; };
+		315108621FF9F1E00051A394 /* TurnPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315108611FF9F1E00051A394 /* TurnPlayerViewController.swift */; };
 		31C9C1031FF23687004F306E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C9C1021FF23687004F306E /* AppDelegate.swift */; };
 		31C9C1051FF23687004F306E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C9C1041FF23687004F306E /* ViewController.swift */; };
 		31C9C1081FF23687004F306E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31C9C1061FF23687004F306E /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 		3151085A1FF880AC0051A394 /* PlayersPagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersPagerViewController.swift; sourceTree = "<group>"; };
 		3151085C1FF88CB30051A394 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		3151085F1FF915450051A394 /* TargetSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetSelectViewController.swift; sourceTree = "<group>"; };
+		315108611FF9F1E00051A394 /* TurnPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurnPlayerViewController.swift; sourceTree = "<group>"; };
 		31C9C0FF1FF23687004F306E /* GokiPoker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GokiPoker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31C9C1021FF23687004F306E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		31C9C1041FF23687004F306E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				3151085C1FF88CB30051A394 /* GameViewController.swift */,
+				315108611FF9F1E00051A394 /* TurnPlayerViewController.swift */,
 				3151085F1FF915450051A394 /* TargetSelectViewController.swift */,
 				3151085A1FF880AC0051A394 /* PlayersPagerViewController.swift */,
 				31C9C1271FF24FD5004F306E /* InitialSettingViewController.swift */,
@@ -219,6 +222,7 @@
 				31C9C1161FF239B7004F306E /* Card.swift in Sources */,
 				3151085B1FF880AC0051A394 /* PlayersPagerViewController.swift in Sources */,
 				31C9C12F1FF3105F004F306E /* TestTableViewCell.swift in Sources */,
+				315108621FF9F1E00051A394 /* TurnPlayerViewController.swift in Sources */,
 				31C9C11C1FF23A5A004F306E /* PlayerHandField.swift in Sources */,
 				31C9C1281FF24FD5004F306E /* InitialSettingViewController.swift in Sources */,
 				3151085D1FF88CB30051A394 /* GameViewController.swift in Sources */,

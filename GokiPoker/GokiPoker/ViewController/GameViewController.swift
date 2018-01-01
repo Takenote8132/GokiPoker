@@ -34,7 +34,8 @@ class GameViewController: UIViewController, UIPageViewControllerDataSource  {
             super.viewWillLayoutSubviews()
             print("debug_viewWillLayoutSubviews()_GameViewController")
             vc = storyboard?.instantiateViewController(withIdentifier: "PlayersPagerViewController") as? PlayersPagerViewController
-            vc?.names = playerNames
+            //vc?.names = playerNames
+            vc?.gameField = gameField
             
             vc2 = storyboard?.instantiateViewController(withIdentifier: "TargetSelectViewController") as? TargetSelectViewController
             vc2?.tempStr = "This is second View"
@@ -52,14 +53,15 @@ class GameViewController: UIViewController, UIPageViewControllerDataSource  {
     @IBAction func rightSwipeForTopAction(_ sender: UISwipeGestureRecognizer) {
         print("debug_rightSwipeForTopAction")
         gameField?.lotatePlayer(swipeRight: true)
-        vc?.reloadViewTexts()
+        customView0.playerNameLabel.text = gameField?.getNameArray()[0]
+        vc?.reloadViewTexts(gf: gameField!)
     }
     @IBAction func leftSwipeForTopAction(_ sender: UISwipeGestureRecognizer) {
         print("debug_leftSwipeForTopAction")
         gameField?.lotatePlayer(swipeRight: false)
-        vc?.reloadViewTexts()
+        customView0.playerNameLabel.text = gameField?.getNameArray()[0]
+        vc?.reloadViewTexts(gf: gameField!)
     }
-    
 }
 
 //MARK: - Function
