@@ -31,6 +31,7 @@ extension Deck{
             cards.append(Card(cardTypeIndex: i%7, isKing: isKingTemp))
             isKingTemp = false
         }
+        //print("debug_deck_nameArray: " + getCardNameArray().description)
     }
     
     func getCard() -> Card {
@@ -56,5 +57,13 @@ extension Deck{
         let v = UInt32(max < min ? 0 : max - min)
         let r = Int(arc4random_uniform(v))
         return min + r
+    }
+    
+    func getCardNameArray() -> [String] {
+        var nameArray: [String] = []
+        for card in cards{
+            nameArray.append(card.name)
+        }
+        return nameArray
     }
 }

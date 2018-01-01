@@ -10,7 +10,7 @@ import Foundation
 
 //MARK: - Main
 class GameField {
-    let players: [Player]
+    var players: [Player]
     private let deck: Deck
     private let numOfInitHand = 7
     
@@ -22,6 +22,10 @@ class GameField {
         players = playersHoge
         deck = Deck(numOfDeck: 49)
         destributeCardsToPlayersFromDeck()
+//        for player in players{
+//            print("debug_GameField_player.showHand() : " + player.showHand())
+//            print("debug_GameField_player.showField() : " + player.showHand())
+//        }
     }
 }
 
@@ -35,5 +39,30 @@ extension GameField{
                 player.addCardToHand(card: deck.getCard())
             }
         }
+    }
+    
+    func getNameArray() -> [String] {
+        var nameArray: [String] = []
+        for i in 0 ..< players.count{
+            nameArray.append(players[i].name)
+        }
+        return nameArray
+    }
+    
+    func lotatePlayer(swipeRight: Bool){
+        if(swipeRight){
+            let tempPlayer = players[0]
+            for i in 0 ..< (players.count-1){
+                players[i] = players[i+1]
+            }
+            players[players.count-1] = tempPlayer
+        }else{
+            let tempPlayer = players[players.count-1]
+            for i in (0 ..< (players.count-1)).reversed(){
+                players[i+1] = players[i]
+            }
+            players[0] = tempPlayer
+        }
+        print("playersName: " + getNameArray().description)
     }
 }

@@ -73,7 +73,6 @@
 				3151085C1FF88CB30051A394 /* GameViewController.swift */,
 				3151085F1FF915450051A394 /* TargetSelectViewController.swift */,
 				3151085A1FF880AC0051A394 /* PlayersPagerViewController.swift */,
-				31C9C1041FF23687004F306E /* ViewController.swift */,
 				31C9C1271FF24FD5004F306E /* InitialSettingViewController.swift */,
 			);
 			path = ViewController;
@@ -104,6 +103,7 @@
 				31C9C1061FF23687004F306E /* Main.storyboard */,
 				31C9C10B1FF23687004F306E /* LaunchScreen.storyboard */,
 				31C9C1021FF23687004F306E /* AppDelegate.swift */,
+				31C9C1041FF23687004F306E /* ViewController.swift */,
 				31C9C1091FF23687004F306E /* Assets.xcassets */,
 				31C9C10E1FF23687004F306E /* Info.plist */,
 			);

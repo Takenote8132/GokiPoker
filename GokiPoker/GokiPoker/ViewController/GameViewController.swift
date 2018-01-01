@@ -18,7 +18,6 @@ class GameViewController: UIViewController, UIPageViewControllerDataSource  {
     
     var playerNames: [String] = []
     var gameField: GameField?
-    var thisIsTwice = false
     var now: Int = 0
     
     var vc: PlayersPagerViewController?
@@ -27,17 +26,11 @@ class GameViewController: UIViewController, UIPageViewControllerDataSource  {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("debug_viewDidLoad()_GameViewController")
-        
         gameField = GameField(namesOfPlayers: playerNames)
         customView0.playerNameLabel.text = playerNames[0]
-        playerNames.removeFirst()
     }
 
     override func viewWillLayoutSubviews() {
-        if(thisIsTwice){
-            print("debug_viewWillLayoutSubviews()_GameViewController_twice")
-            vc?.removeViewFrom(at: playerNames.count)
-        }else{
             super.viewWillLayoutSubviews()
             print("debug_viewWillLayoutSubviews()_GameViewController")
             vc = storyboard?.instantiateViewController(withIdentifier: "PlayersPagerViewController") as? PlayersPagerViewController
@@ -49,13 +42,24 @@ class GameViewController: UIViewController, UIPageViewControllerDataSource  {
             pageViewController = childViewControllers[0] as? UIPageViewController// ContainerView に Embed した UIPageViewController を取得する
             pageViewController!.dataSource = self// dataSource を設定する
             pageViewController!.setViewControllers([vc!], direction: .forward, animated: false, completion: nil)// 最初に表示する配列の先頭の ViewController を設定
-            thisIsTwice = true
-        }
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    //MARK: - Func For TargetPlayer
+    @IBAction func rightSwipeForTopAction(_ sender: UISwipeGestureRecognizer) {
+        print("debug_rightSwipeForTopAction")
+        gameField?.lotatePlayer(swipeRight: true)
+        vc?.reloadViewTexts()
+    }
+    @IBAction func leftSwipeForTopAction(_ sender: UISwipeGestureRecognizer) {
+        print("debug_leftSwipeForTopAction")
+        gameField?.lotatePlayer(swipeRight: false)
+        vc?.reloadViewTexts()
+    }
+    
 }
 
 //MARK: - Function

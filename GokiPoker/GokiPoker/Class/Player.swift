@@ -34,10 +34,12 @@ extension Player{
     }
     
     func showHand() -> String {
+        print("debug_Player_showHand: " + hand.showAll().description)
         return hand.showAll()
     }
     
     func showField() -> String {
+        print("debug_Player_showField: " + field.showAll().description)
         return field.showAll()
     }
 }

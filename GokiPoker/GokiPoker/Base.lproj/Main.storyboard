@@ -210,6 +210,11 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sfF-6g-ejQ" customClass="PlayerFieldCustomView" customModule="GokiPoker" customModuleProvider="target">
                                 <rect key="frame" x="24" y="44" width="327" height="97"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="P42-4M-1fI" appends="YES" id="bfj-iv-PLB"/>
+                                    <outletCollection property="gestureRecognizers" destination="FSh-dq-jHg" appends="YES" id="Ghh-Uc-u7R"/>
+                                </connections>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4JN-uB-WQM">
                                 <rect key="frame" x="24" y="546" width="327" height="97"/>
@@ -250,6 +255,16 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="COQ-70-XA1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer cancelsTouchesInView="NO" direction="right" id="P42-4M-1fI">
+                    <connections>
+                        <action selector="rightSwipeForTopAction:" destination="YuJ-3b-h5Y" id="G54-i8-kQ0"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer cancelsTouchesInView="NO" direction="left" id="FSh-dq-jHg">
+                    <connections>
+                        <action selector="leftSwipeForTopAction:" destination="YuJ-3b-h5Y" id="NYC-W7-V8S"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1073" y="34"/>
         </scene>
