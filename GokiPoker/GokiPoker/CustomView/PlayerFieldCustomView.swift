@@ -19,6 +19,7 @@ class PlayerFieldCustomView: UIView {
     @IBOutlet weak var field4: UILabel!
     @IBOutlet weak var field5: UILabel!
     @IBOutlet weak var field6: UILabel!
+    var fieldCardLabels = [UILabel]()
     
     var name: String = "PlayerFieldCustomView"
     
@@ -46,5 +47,27 @@ class PlayerFieldCustomView: UIView {
         view.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         //addする。viewオブジェクトの2枚重ねになる。
         self.addSubview(view)
+        
+        fieldCardLabels = [field0, field1, field2, field3, field4, field5, field6]
+        setFieldBackgroundColor()
+        for lbl in fieldCardLabels{
+            lbl.text = String(0)
+            lbl.textColor = UIColor.white
+        }
+    }
+    
+    func setFieldBackgroundColor(){
+        //[.hae, .goki, .kamemushi, .komori, .kumo, .nezumi, .sasori]
+        field0.backgroundColor = UIColor.blue
+        field1.backgroundColor = UIColor.brown
+        field2.backgroundColor = UIColor.green
+        field3.backgroundColor = UIColor.purple
+        field4.backgroundColor = UIColor.black
+        field5.backgroundColor = UIColor.gray
+        field6.backgroundColor = UIColor.orange
+    }
+    
+    func setFieldLabelText(at: Int, text: String){
+        fieldCardLabels[at].text = text
     }
 }
