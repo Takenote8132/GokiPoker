@@ -637,6 +637,7 @@
                             <constraint firstItem="BAj-a7-eOr" firstAttribute="height" secondItem="LNl-25-jdH" secondAttribute="height" multiplier="0.2" id="ob3-4t-47j"/>
                             <constraint firstItem="BAj-a7-eOr" firstAttribute="leading" secondItem="uAJ-FD-4P8" secondAttribute="trailing" id="xZh-6k-DqQ"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="BQv-er-zjm"/>
                     </view>
                     <connections>
                         <outlet property="TurnPlayerNumOfHandLabel" destination="BAj-a7-eOr" id="i1n-Ov-qbm"/>

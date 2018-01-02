@@ -14,6 +14,7 @@ class TurnPlayerViewController: UIViewController, UICollectionViewDataSource, UI
     @IBOutlet weak var TurnPlayerNumOfHandLabel: UILabel!
     
     override func viewDidLoad() {
+        print("debug_TurnPlayerViewController_viewDidLoad()")
         super.viewDidLoad()
     }
 
@@ -41,3 +42,11 @@ class TurnPlayerViewController: UIViewController, UICollectionViewDataSource, UI
         return cell
     }
 }
+
+//MARK: - Function
+extension TurnPlayerViewController{
+    func setLabelText(){
+        turnPlayerNameLabel.text = GameViewController.gameField?.getNameLast()
+    }
+}
+

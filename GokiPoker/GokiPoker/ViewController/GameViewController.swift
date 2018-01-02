@@ -17,32 +17,35 @@ class GameViewController: UIViewController, UIPageViewControllerDataSource  {
     var pageViewController: UIPageViewController?
     
     var playerNames: [String] = []
-    var gameField: GameField?
+    static var gameField: GameField?
     var now: Int = 0
     
-    var vc: PlayersPagerViewController?
-    var vc2: TargetSelectViewController?
+    var playersPagerViewController: PlayersPagerViewController?
+    var targetSelectViewController: TargetSelectViewController?
+    var turnPlayerViewController: TurnPlayerViewController?
     
     override func viewDidLoad() {
-        super.viewDidLoad()
         print("debug_viewDidLoad()_GameViewController")
-        gameField = GameField(namesOfPlayers: playerNames)
+        super.viewDidLoad()
+        GameViewController.gameField = GameField(namesOfPlayers: playerNames)
         customView0.playerNameLabel.text = playerNames[0]
     }
 
     override func viewWillLayoutSubviews() {
             super.viewWillLayoutSubviews()
             print("debug_viewWillLayoutSubviews()_GameViewController")
-            vc = storyboard?.instantiateViewController(withIdentifier: "PlayersPagerViewController") as? PlayersPagerViewController
-            //vc?.names = playerNames
-            vc?.gameField = gameField
-            
-            vc2 = storyboard?.instantiateViewController(withIdentifier: "TargetSelectViewController") as? TargetSelectViewController
-            vc2?.tempStr = "This is second View"
+            playersPagerViewController = storyboard?.instantiateViewController(withIdentifier: "PlayersPagerViewController") as? PlayersPagerViewController
+        
+            targetSelectViewController = storyboard?.instantiateViewController(withIdentifier: "TargetSelectViewController") as? TargetSelectViewController
+            targetSelectViewController?.tempStr = "This is second View"
             
             pageViewController = childViewControllers[0] as? UIPageViewController// ContainerView に Embed した UIPageViewController を取得する
             pageViewController!.dataSource = self// dataSource を設定する
-            pageViewController!.setViewControllers([vc!], direction: .forward, animated: false, completion: nil)// 最初に表示する配列の先頭の ViewController を設定
+            pageViewController!.setViewControllers([playersPagerViewController!], direction: .forward, animated: false, completion: nil)// 最初に表示する配列の先頭の ViewController を設定
+        
+        print("debug_GameViewController_viewDidLoad_childViewController[1]: " + childViewControllers[1].description)
+        turnPlayerViewController = childViewControllers[1] as? TurnPlayerViewController//
+        turnPlayerViewController?.setLabelText()
     }
     
     override func didReceiveMemoryWarning() {
@@ -52,15 +55,15 @@ class GameViewController: UIViewController, UIPageViewControllerDataSource  {
     //MARK: - Func For TargetPlayer
     @IBAction func rightSwipeForTopAction(_ sender: UISwipeGestureRecognizer) {
         print("debug_rightSwipeForTopAction")
-        gameField?.lotatePlayer(swipeRight: true)
-        customView0.playerNameLabel.text = gameField?.getNameArray()[0]
-        vc?.reloadViewTexts(gf: gameField!)
+        GameViewController.gameField?.lotatePlayer(swipeRight: true)
+        customView0.playerNameLabel.text = GameViewController.gameField?.getNameArray()[0]
+        playersPagerViewController?.reloadViewTexts()
     }
     @IBAction func leftSwipeForTopAction(_ sender: UISwipeGestureRecognizer) {
         print("debug_leftSwipeForTopAction")
-        gameField?.lotatePlayer(swipeRight: false)
-        customView0.playerNameLabel.text = gameField?.getNameArray()[0]
-        vc?.reloadViewTexts(gf: gameField!)
+        GameViewController.gameField?.lotatePlayer(swipeRight: false)
+        customView0.playerNameLabel.text = GameViewController.gameField?.getNameArray()[0]
+        playersPagerViewController?.reloadViewTexts()
     }
 }
 
@@ -72,7 +75,7 @@ extension GameViewController{
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         if(now == 1){
             now = 0
-            return vc
+            return playersPagerViewController
         }else{
             return nil
         }
@@ -81,7 +84,7 @@ extension GameViewController{
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         if(now == 0){
             now = 1
-            return vc2
+            return targetSelectViewController
         }else{
             return nil
         }

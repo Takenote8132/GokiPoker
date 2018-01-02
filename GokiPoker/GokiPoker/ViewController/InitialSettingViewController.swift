@@ -54,7 +54,7 @@ class InitialSettingViewController: UIViewController, UIPickerViewDelegate, UIPi
 //MARK: - Segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "toNextSegue") {
-            print("toNextSegue")
+            print("debug_InitialSettingViewController_prepare()_toNextSegue")
             for i in 0 ..< now{
                 if(inputNanmeViews[i].textView.text != ""){
                     names.append(inputNanmeViews[i].textView.text!)
