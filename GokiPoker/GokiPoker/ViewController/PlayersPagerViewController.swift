@@ -16,8 +16,6 @@ class PlayersPagerViewController: UIViewController {
     @IBOutlet weak var playerFieldView3: PlayerFieldCustomView!
     @IBOutlet weak var playerFieldView4: PlayerFieldCustomView!
     
-    @IBOutlet weak var dammyConst: NSLayoutConstraint!
-    
     @IBOutlet weak var const0for6: NSLayoutConstraint!
     @IBOutlet weak var const0for5: NSLayoutConstraint!
     @IBOutlet weak var const0for4: NSLayoutConstraint!
@@ -36,7 +34,7 @@ class PlayersPagerViewController: UIViewController {
     @IBOutlet weak var const3for6: NSLayoutConstraint!
     @IBOutlet weak var const3for5: NSLayoutConstraint!
     
-    @IBOutlet weak var const4for6: NSLayoutConstraint!
+    @IBOutlet weak var dammyConst: NSLayoutConstraint!
     
     var names: [String] = []
     var customViews: [PlayerFieldCustomView] = []
@@ -45,8 +43,8 @@ class PlayersPagerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("debug_viewDidLoad_PlayerPagerViewController")
-        constrains = [[const0for2,const0ror3, const0for4, const0for5, const0for6], [dammyConst, const1for3, const1for4, const1for5, const1for6], [dammyConst,dammyConst, const2for4, const2for5, const2for6], [dammyConst, dammyConst, dammyConst, const3for5, const3for6], [dammyConst,dammyConst,dammyConst,dammyConst, const4for6]]
-        customViews = [playerFieldView0, playerFieldView1, playerFieldView2, playerFieldView3, playerFieldView4]
+        constrains = [[const0for2,const0ror3, const0for4, const0for5, const0for6], [dammyConst, const1for3, const1for4, const1for5, const1for6], [dammyConst,dammyConst, const2for4, const2for5, const2for6], [dammyConst, dammyConst, dammyConst, const3for5, const3for6]]
+        customViews = [playerFieldView0, playerFieldView1, playerFieldView2, playerFieldView3]
         reloadViewTexts()
     }
     
@@ -65,8 +63,7 @@ extension PlayersPagerViewController{
     //MARK: - reload view texts
     func reloadViewTexts(){
         if let namesForHere = GameViewController.gameField?.getNameArray(){
-            //nfh.removeFirst()
-            for i in 0 ..< (namesForHere.count-1){
+            for i in 0 ..< customViews.count{
                 customViews[i].playerNameLabel.text = namesForHere[i+1]
             }
         }
@@ -89,13 +86,13 @@ extension PlayersPagerViewController{
         if(num == 5){
             return
         }else{
-            for i in 0 ..< 5{
+            for i in 0 ..< 4{
                 if(constrains[i][num-1] === dammyConst){
                     print("debug_dammyConst_true: " + String(i))
                 }else{
                     print("debug_dammyConst_false: " + String(i))
                     NSLayoutConstraint.activate([constrains[i][num-1]])
-                    NSLayoutConstraint.deactivate([constrains[i][4]])
+                    NSLayoutConstraint.deactivate([constrains[i][3]])
                 }
             }
             
