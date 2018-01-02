@@ -316,7 +316,7 @@
                             <constraint firstItem="2vj-gM-4uK" firstAttribute="height" secondItem="E49-w1-arP" secondAttribute="height" multiplier="0.266" id="HeL-We-ZH3"/>
                             <constraint firstItem="QHa-TK-dqS" firstAttribute="height" secondItem="E49-w1-arP" secondAttribute="height" multiplier="0.2" id="Lh9-AS-L0Y"/>
                             <constraint firstItem="E49-w1-arP" firstAttribute="leading" secondItem="hhk-hc-96R" secondAttribute="leading" id="Lwa-7b-82O"/>
-                            <constraint firstItem="Agl-ie-epY" firstAttribute="height" secondItem="E49-w1-arP" secondAttribute="height" multiplier="0.33" id="M96-1b-Zva"/>
+                            <constraint firstItem="Agl-ie-epY" firstAttribute="height" secondItem="E49-w1-arP" secondAttribute="height" multiplier="0.266" id="M96-1b-Zva"/>
                             <constraint firstItem="Agl-ie-epY" firstAttribute="leading" secondItem="E49-w1-arP" secondAttribute="trailing" constant="24" id="PCR-4c-MkE"/>
                             <constraint firstItem="5PV-Fi-Su4" firstAttribute="height" secondItem="E49-w1-arP" secondAttribute="height" multiplier="0.266" id="QDY-eF-1g5"/>
                             <constraint firstAttribute="bottom" secondItem="E49-w1-arP" secondAttribute="bottom" id="Qsl-Hh-aV1"/>
@@ -357,10 +357,10 @@
                     </view>
                     <connections>
                         <outlet property="const0for2" destination="jLR-TX-ffX" id="0v2-t7-o5w"/>
+                        <outlet property="const0for3" destination="fkF-6E-Gzj" id="KG2-J1-bqm"/>
                         <outlet property="const0for4" destination="k6X-pc-lzM" id="DHy-S0-krg"/>
                         <outlet property="const0for5" destination="M96-1b-Zva" id="BNY-fD-PTp"/>
                         <outlet property="const0for6" destination="gJE-tC-X6N" id="5Wz-Hv-ncL"/>
-                        <outlet property="const0ror3" destination="fkF-6E-Gzj" id="KG2-J1-bqm"/>
                         <outlet property="const1for3" destination="zca-OI-Qaf" id="sD1-4n-kJq"/>
                         <outlet property="const1for4" destination="56K-GS-uNx" id="Igc-9x-2w7"/>
                         <outlet property="const1for5" destination="2SA-n8-cy9" id="cPL-Zo-qwW"/>

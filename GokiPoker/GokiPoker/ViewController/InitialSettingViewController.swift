@@ -23,10 +23,11 @@ class InitialSettingViewController: UIViewController, UIPickerViewDelegate, UIPi
     @IBOutlet weak var nameInputView4: TestCustomView!
     @IBOutlet weak var nameInputView5: TestCustomView!
     
-    let numOfPlayer: [[Int]] = [[2,3,4,5,6]]
+    //let numOfPlayer: [[Int]] = [[2,3,4,5,6]]
+    let numOfPlayer: [[Int]] = [[3,4,5,6]]
     var inputNanmeViews: [TestCustomView] = []
     var names: [String] = []
-    var now: Int = 2
+    var now: Int = 3
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +38,7 @@ class InitialSettingViewController: UIViewController, UIPickerViewDelegate, UIPi
         
         var i = 1
         for view in inputNanmeViews{
-            if(i > 2){
+            if(i > now){
                 view.alpha = 0
             }
             view.leftLabel.text = "Player" + i.description + ": "
