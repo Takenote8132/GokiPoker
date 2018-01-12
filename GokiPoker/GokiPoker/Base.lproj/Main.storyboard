@@ -284,60 +284,60 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E49-w1-arP">
-                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="667"/>
+                                <rect key="frame" x="8" y="0.0" width="0.0" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" id="Qc1-yB-Gf0"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Agl-ie-epY" customClass="PlayerFieldCustomView" customModule="GokiPoker" customModuleProvider="target">
-                                <rect key="frame" x="24" y="44" width="327" height="133.5"/>
+                                <rect key="frame" x="8" y="20" width="359" height="167"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QHa-TK-dqS" customClass="PlayerFieldCustomView" customModule="GokiPoker" customModuleProvider="target">
-                                <rect key="frame" x="24" y="185.5" width="327" height="133.5"/>
+                                <rect key="frame" x="8" y="187" width="359" height="167"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5PV-Fi-Su4" customClass="PlayerFieldCustomView" customModule="GokiPoker" customModuleProvider="target">
-                                <rect key="frame" x="24" y="327" width="327" height="133.5"/>
+                                <rect key="frame" x="8" y="354" width="359" height="167"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2vj-gM-4uK" customClass="PlayerFieldCustomView" customModule="GokiPoker" customModuleProvider="target">
-                                <rect key="frame" x="24" y="468.5" width="327" height="133.5"/>
+                                <rect key="frame" x="8" y="521" width="359" height="167"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="QHa-TK-dqS" firstAttribute="height" secondItem="E49-w1-arP" secondAttribute="height" multiplier="0.266" id="2SA-n8-cy9"/>
-                            <constraint firstItem="QHa-TK-dqS" firstAttribute="height" secondItem="E49-w1-arP" secondAttribute="height" multiplier="0.4" id="56K-GS-uNx"/>
+                            <constraint firstItem="QHa-TK-dqS" firstAttribute="height" secondItem="E49-w1-arP" secondAttribute="height" multiplier="0.33" id="2SA-n8-cy9"/>
+                            <constraint firstItem="QHa-TK-dqS" firstAttribute="height" secondItem="E49-w1-arP" secondAttribute="height" multiplier="0.5" id="56K-GS-uNx"/>
                             <constraint firstItem="E49-w1-arP" firstAttribute="top" secondItem="ErX-5L-2F4" secondAttribute="top" id="5zn-KD-JbZ"/>
-                            <constraint firstItem="5PV-Fi-Su4" firstAttribute="height" secondItem="E49-w1-arP" secondAttribute="height" multiplier="0.4" id="BGq-Uv-WR9"/>
-                            <constraint firstItem="2vj-gM-4uK" firstAttribute="height" secondItem="E49-w1-arP" secondAttribute="height" multiplier="0.266" id="HeL-We-ZH3"/>
-                            <constraint firstItem="QHa-TK-dqS" firstAttribute="height" secondItem="E49-w1-arP" secondAttribute="height" multiplier="0.2" id="Lh9-AS-L0Y"/>
-                            <constraint firstItem="E49-w1-arP" firstAttribute="leading" secondItem="hhk-hc-96R" secondAttribute="leading" id="Lwa-7b-82O"/>
-                            <constraint firstItem="Agl-ie-epY" firstAttribute="height" secondItem="E49-w1-arP" secondAttribute="height" multiplier="0.266" id="M96-1b-Zva"/>
-                            <constraint firstItem="Agl-ie-epY" firstAttribute="leading" secondItem="E49-w1-arP" secondAttribute="trailing" constant="24" id="PCR-4c-MkE"/>
-                            <constraint firstItem="5PV-Fi-Su4" firstAttribute="height" secondItem="E49-w1-arP" secondAttribute="height" multiplier="0.266" id="QDY-eF-1g5"/>
+                            <constraint firstItem="5PV-Fi-Su4" firstAttribute="height" secondItem="E49-w1-arP" secondAttribute="height" multiplier="0.5" id="BGq-Uv-WR9"/>
+                            <constraint firstItem="2vj-gM-4uK" firstAttribute="height" secondItem="E49-w1-arP" secondAttribute="height" multiplier="0.33" id="HeL-We-ZH3"/>
+                            <constraint firstItem="QHa-TK-dqS" firstAttribute="height" secondItem="E49-w1-arP" secondAttribute="height" multiplier="0.25" id="Lh9-AS-L0Y"/>
+                            <constraint firstItem="E49-w1-arP" firstAttribute="leading" secondItem="hhk-hc-96R" secondAttribute="leading" constant="8" id="Lwa-7b-82O"/>
+                            <constraint firstItem="Agl-ie-epY" firstAttribute="height" secondItem="E49-w1-arP" secondAttribute="height" multiplier="0.33" id="M96-1b-Zva"/>
+                            <constraint firstItem="Agl-ie-epY" firstAttribute="leading" secondItem="E49-w1-arP" secondAttribute="trailing" id="PCR-4c-MkE"/>
+                            <constraint firstItem="5PV-Fi-Su4" firstAttribute="height" secondItem="E49-w1-arP" secondAttribute="height" multiplier="0.33" id="QDY-eF-1g5"/>
                             <constraint firstAttribute="bottom" secondItem="E49-w1-arP" secondAttribute="bottom" id="Qsl-Hh-aV1"/>
-                            <constraint firstItem="2vj-gM-4uK" firstAttribute="height" secondItem="E49-w1-arP" secondAttribute="height" multiplier="0.2" id="RmO-Sy-3TX"/>
-                            <constraint firstItem="QHa-TK-dqS" firstAttribute="top" secondItem="Agl-ie-epY" secondAttribute="bottom" constant="8" id="WFk-P1-zza"/>
+                            <constraint firstItem="2vj-gM-4uK" firstAttribute="height" secondItem="E49-w1-arP" secondAttribute="height" multiplier="0.25" id="RmO-Sy-3TX"/>
+                            <constraint firstItem="QHa-TK-dqS" firstAttribute="top" secondItem="Agl-ie-epY" secondAttribute="bottom" id="WFk-P1-zza"/>
                             <constraint firstItem="5PV-Fi-Su4" firstAttribute="trailing" secondItem="QHa-TK-dqS" secondAttribute="trailing" id="WUb-Zg-ytm"/>
-                            <constraint firstItem="Agl-ie-epY" firstAttribute="height" secondItem="E49-w1-arP" secondAttribute="height" multiplier="0.8" id="fkF-6E-Gzj"/>
-                            <constraint firstItem="Agl-ie-epY" firstAttribute="height" secondItem="E49-w1-arP" secondAttribute="height" multiplier="0.2" id="gJE-tC-X6N"/>
+                            <constraint firstItem="Agl-ie-epY" firstAttribute="height" secondItem="E49-w1-arP" secondAttribute="height" id="fkF-6E-Gzj"/>
+                            <constraint firstItem="Agl-ie-epY" firstAttribute="height" secondItem="E49-w1-arP" secondAttribute="height" multiplier="0.25" id="gJE-tC-X6N"/>
                             <constraint firstItem="2vj-gM-4uK" firstAttribute="trailing" secondItem="Agl-ie-epY" secondAttribute="trailing" id="gat-Uo-7kR"/>
                             <constraint firstItem="Agl-ie-epY" firstAttribute="height" secondItem="E49-w1-arP" secondAttribute="height" id="jLR-TX-ffX"/>
-                            <constraint firstItem="Agl-ie-epY" firstAttribute="height" secondItem="E49-w1-arP" secondAttribute="height" multiplier="0.4" id="k6X-pc-lzM"/>
-                            <constraint firstItem="hhk-hc-96R" firstAttribute="trailing" secondItem="Agl-ie-epY" secondAttribute="trailing" constant="24" id="l8G-H7-jrB"/>
+                            <constraint firstItem="Agl-ie-epY" firstAttribute="height" secondItem="E49-w1-arP" secondAttribute="height" multiplier="0.5" id="k6X-pc-lzM"/>
+                            <constraint firstItem="hhk-hc-96R" firstAttribute="trailing" secondItem="Agl-ie-epY" secondAttribute="trailing" constant="8" id="l8G-H7-jrB"/>
                             <constraint firstItem="2vj-gM-4uK" firstAttribute="leading" secondItem="Agl-ie-epY" secondAttribute="leading" id="nRy-xH-cG9"/>
                             <constraint firstItem="QHa-TK-dqS" firstAttribute="trailing" secondItem="Agl-ie-epY" secondAttribute="trailing" id="nT7-tm-Iep"/>
-                            <constraint firstItem="Agl-ie-epY" firstAttribute="top" secondItem="hhk-hc-96R" secondAttribute="top" constant="24" id="neJ-KB-dBQ"/>
-                            <constraint firstItem="2vj-gM-4uK" firstAttribute="top" secondItem="5PV-Fi-Su4" secondAttribute="bottom" constant="8" id="sbt-Vw-llN"/>
-                            <constraint firstItem="5PV-Fi-Su4" firstAttribute="top" secondItem="QHa-TK-dqS" secondAttribute="bottom" constant="8" id="tX4-Ci-mjT"/>
+                            <constraint firstItem="Agl-ie-epY" firstAttribute="top" secondItem="hhk-hc-96R" secondAttribute="top" id="neJ-KB-dBQ"/>
+                            <constraint firstItem="2vj-gM-4uK" firstAttribute="top" secondItem="5PV-Fi-Su4" secondAttribute="bottom" id="sbt-Vw-llN"/>
+                            <constraint firstItem="5PV-Fi-Su4" firstAttribute="top" secondItem="QHa-TK-dqS" secondAttribute="bottom" id="tX4-Ci-mjT"/>
                             <constraint firstItem="5PV-Fi-Su4" firstAttribute="leading" secondItem="QHa-TK-dqS" secondAttribute="leading" id="uNr-dw-p06"/>
-                            <constraint firstItem="5PV-Fi-Su4" firstAttribute="height" secondItem="E49-w1-arP" secondAttribute="height" multiplier="0.2" id="yip-Ee-1oD"/>
+                            <constraint firstItem="5PV-Fi-Su4" firstAttribute="height" secondItem="E49-w1-arP" secondAttribute="height" multiplier="0.25" id="yip-Ee-1oD"/>
                             <constraint firstItem="QHa-TK-dqS" firstAttribute="leading" secondItem="Agl-ie-epY" secondAttribute="leading" id="yoD-be-5zr"/>
-                            <constraint firstItem="QHa-TK-dqS" firstAttribute="height" secondItem="E49-w1-arP" secondAttribute="height" multiplier="0.8" id="zca-OI-Qaf"/>
+                            <constraint firstItem="QHa-TK-dqS" firstAttribute="height" secondItem="E49-w1-arP" secondAttribute="height" id="zca-OI-Qaf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hhk-hc-96R"/>
                         <variation key="default">
