@@ -38,10 +38,13 @@ class GameViewController: UIViewController, UIPageViewControllerDataSource  {
         
             targetSelectViewController = storyboard?.instantiateViewController(withIdentifier: "TargetSelectViewController") as? TargetSelectViewController
             targetSelectViewController?.tempStr = "This is second View"
-            
+
             pageViewController = childViewControllers[0] as? UIPageViewController// ContainerView に Embed した UIPageViewController を取得する
             pageViewController!.dataSource = self// dataSource を設定する
             pageViewController!.setViewControllers([playersPagerViewController!], direction: .forward, animated: false, completion: nil)// 最初に表示する配列の先頭の ViewController を設定
+
+        //pageViewController!.setViewControllers([targetSelectViewController!], direction: .forward, animated: false, completion: nil)// 最初に表示する配列の先頭の ViewController を設定
+        
         
         print("debug_GameViewController_viewDidLoad_childViewController[1]: " + childViewControllers[1].description)
         turnPlayerViewController = childViewControllers[1] as? TurnPlayerViewController//
@@ -73,19 +76,25 @@ extension GameViewController{
     //MARK: - Func For Pager
     // 逆方向にページ送りした時に呼ばれるメソッド
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+        print("debug_GameViewController_SwipeLeft")
         if(now == 1){
+            print("debug_GameViewController_SwipeLeft_True_" + (playersPagerViewController?.description)!)
             now = 0
             return playersPagerViewController
         }else{
+            print("debug_GameViewController_SwipeLeft_False")
             return nil
         }
     }
     // 順方向にページ送りした時に呼ばれるメソッド
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
+        print("debug_GameViewController_SwipeRight")
         if(now == 0){
+            print("debug_GameViewController_SwipeRight_True_" + (targetSelectViewController?.description)!)
             now = 1
             return targetSelectViewController
         }else{
+            print("debug_GameViewController_SwipeRight_False")
             return nil
         }
     }

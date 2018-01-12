@@ -10,8 +10,8 @@ import UIKit
 
 class TurnPlayerViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
-    @IBOutlet weak var turnPlayerNameLabel: UILabel!
-    @IBOutlet weak var TurnPlayerNumOfHandLabel: UILabel!
+    @IBOutlet weak var playerFieldCustomView: PlayerFieldCustomView!
+    
     
     override func viewDidLoad() {
         print("debug_TurnPlayerViewController_viewDidLoad()")
@@ -46,7 +46,7 @@ class TurnPlayerViewController: UIViewController, UICollectionViewDataSource, UI
 //MARK: - Function
 extension TurnPlayerViewController{
     func setLabelText(){
-        turnPlayerNameLabel.text = GameViewController.gameField?.getNameLast()
+        playerFieldCustomView.playerNameLabel.text = GameViewController.gameField?.getNameLast()
     }
 }
 

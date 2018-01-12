@@ -217,13 +217,13 @@
                                 </connections>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1io-ei-qBA">
-                                <rect key="frame" x="24" y="149" width="327" height="389"/>
+                                <rect key="frame" x="24" y="149" width="327" height="324.5"/>
                                 <connections>
                                     <segue destination="Tt1-Xl-bP8" kind="embed" id="IpW-zc-FnR"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ibH-XX-7lV">
-                                <rect key="frame" x="24" y="546" width="327" height="97"/>
+                                <rect key="frame" x="24" y="481.5" width="327" height="161.5"/>
                                 <connections>
                                     <segue destination="7Gm-H9-xAZ" kind="embed" id="hs3-TC-u68"/>
                                 </connections>
@@ -241,7 +241,7 @@
                             <constraint firstItem="sfF-6g-ejQ" firstAttribute="height" secondItem="kLJ-fS-ynF" secondAttribute="height" multiplier="0.15" id="LZ0-rz-7SN"/>
                             <constraint firstItem="1io-ei-qBA" firstAttribute="top" secondItem="sfF-6g-ejQ" secondAttribute="bottom" constant="8" id="Sw2-iB-vqs"/>
                             <constraint firstItem="ibH-XX-7lV" firstAttribute="leading" secondItem="sfF-6g-ejQ" secondAttribute="leading" id="UQM-DW-gwt"/>
-                            <constraint firstItem="ibH-XX-7lV" firstAttribute="height" secondItem="kLJ-fS-ynF" secondAttribute="height" multiplier="0.15" id="kEk-ZJ-vNz"/>
+                            <constraint firstItem="ibH-XX-7lV" firstAttribute="height" secondItem="kLJ-fS-ynF" secondAttribute="height" multiplier="0.25" id="kEk-ZJ-vNz"/>
                             <constraint firstItem="LAc-Bg-ap2" firstAttribute="trailing" secondItem="sfF-6g-ejQ" secondAttribute="trailing" constant="24" id="kRh-A7-mXb"/>
                             <constraint firstItem="1io-ei-qBA" firstAttribute="trailing" secondItem="sfF-6g-ejQ" secondAttribute="trailing" id="oT8-Ar-UoY"/>
                             <constraint firstItem="ibH-XX-7lV" firstAttribute="trailing" secondItem="sfF-6g-ejQ" secondAttribute="trailing" id="sFT-p2-OaA"/>
@@ -551,7 +551,7 @@
             <objects>
                 <viewController storyboardIdentifier="TurnPlayerViewController" id="7Gm-H9-xAZ" customClass="TurnPlayerViewController" customModule="GokiPoker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ABt-x7-gtb">
-                        <rect key="frame" x="0.0" y="0.0" width="327" height="97"/>
+                        <rect key="frame" x="0.0" y="0.0" width="327" height="161.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="caU-bs-9O8" userLabel="WidthBase">
@@ -559,26 +559,18 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LNl-25-jdH" userLabel="HeightBase">
-                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="97"/>
+                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="161.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" id="muP-Gl-6rE"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uAJ-FD-4P8">
-                                <rect key="frame" x="0.0" y="0.0" width="163.5" height="19.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BAj-a7-eOr">
-                                <rect key="frame" x="163.5" y="0.0" width="163.5" height="19.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bZh-Xz-Omp" customClass="PlayerFieldCustomView" customModule="GokiPoker" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="327" height="81"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WCX-9c-N2E">
-                                <rect key="frame" x="0.0" y="19.5" width="327" height="68"/>
+                                <rect key="frame" x="0.0" y="81" width="327" height="80.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dL7-2k-aaR">
                                     <size key="itemSize" width="50" height="50"/>
@@ -588,7 +580,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TurnPlayerCardCell" id="PZ7-ub-mSs">
-                                        <rect key="frame" x="0.0" y="9" width="50" height="50"/>
+                                        <rect key="frame" x="0.0" y="15.5" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -604,38 +596,33 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="uAJ-FD-4P8" firstAttribute="leading" secondItem="LNl-25-jdH" secondAttribute="trailing" id="04L-Jf-w0M"/>
+                            <constraint firstItem="BQv-er-zjm" firstAttribute="trailing" secondItem="bZh-Xz-Omp" secondAttribute="trailing" id="4Uq-BT-P0h"/>
                             <constraint firstAttribute="bottom" secondItem="LNl-25-jdH" secondAttribute="bottom" id="5LJ-PL-CPB"/>
                             <constraint firstItem="LNl-25-jdH" firstAttribute="leading" secondItem="ABt-x7-gtb" secondAttribute="leading" id="6Ca-5P-znz"/>
-                            <constraint firstItem="BAj-a7-eOr" firstAttribute="top" secondItem="caU-bs-9O8" secondAttribute="bottom" id="8NH-ok-xHa"/>
                             <constraint firstAttribute="trailing" secondItem="WCX-9c-N2E" secondAttribute="trailing" id="Aoo-1g-Gna"/>
+                            <constraint firstItem="WCX-9c-N2E" firstAttribute="top" secondItem="bZh-Xz-Omp" secondAttribute="bottom" id="DSi-61-VPP"/>
                             <constraint firstItem="LNl-25-jdH" firstAttribute="leading" secondItem="ABt-x7-gtb" secondAttribute="leading" id="Gka-36-7uH"/>
-                            <constraint firstItem="WCX-9c-N2E" firstAttribute="height" secondItem="LNl-25-jdH" secondAttribute="height" multiplier="0.7" id="I6l-KW-Sq9"/>
+                            <constraint firstItem="WCX-9c-N2E" firstAttribute="height" secondItem="LNl-25-jdH" secondAttribute="height" multiplier="0.5" id="I6l-KW-Sq9"/>
                             <constraint firstItem="LNl-25-jdH" firstAttribute="top" secondItem="caU-bs-9O8" secondAttribute="bottom" id="KzU-9o-ENM"/>
-                            <constraint firstItem="BAj-a7-eOr" firstAttribute="width" secondItem="caU-bs-9O8" secondAttribute="width" multiplier="0.5" id="NTc-jy-s6J"/>
+                            <constraint firstItem="bZh-Xz-Omp" firstAttribute="leading" secondItem="LNl-25-jdH" secondAttribute="trailing" id="NXG-34-043"/>
                             <constraint firstItem="WCX-9c-N2E" firstAttribute="leading" secondItem="LNl-25-jdH" secondAttribute="trailing" id="QLQ-ad-KBZ"/>
-                            <constraint firstItem="uAJ-FD-4P8" firstAttribute="top" secondItem="caU-bs-9O8" secondAttribute="bottom" id="QsX-TE-tKz"/>
-                            <constraint firstItem="uAJ-FD-4P8" firstAttribute="height" secondItem="LNl-25-jdH" secondAttribute="height" multiplier="0.2" id="S9C-Li-yXF"/>
                             <constraint firstItem="caU-bs-9O8" firstAttribute="leading" secondItem="ABt-x7-gtb" secondAttribute="leading" id="TwJ-nE-ajj"/>
                             <constraint firstItem="caU-bs-9O8" firstAttribute="top" secondItem="ABt-x7-gtb" secondAttribute="top" id="UWY-Gr-pai"/>
                             <constraint firstAttribute="trailing" secondItem="caU-bs-9O8" secondAttribute="trailing" id="VRr-yS-fWY"/>
-                            <constraint firstItem="uAJ-FD-4P8" firstAttribute="width" secondItem="caU-bs-9O8" secondAttribute="width" multiplier="0.5" id="Z4M-B2-dbl"/>
                             <constraint firstItem="LNl-25-jdH" firstAttribute="top" secondItem="ABt-x7-gtb" secondAttribute="top" id="c2r-bi-LA5"/>
-                            <constraint firstAttribute="bottom" secondItem="LNl-25-jdH" secondAttribute="bottom" id="gjP-HQ-0eJ"/>
-                            <constraint firstItem="WCX-9c-N2E" firstAttribute="top" secondItem="uAJ-FD-4P8" secondAttribute="bottom" id="mD2-td-gQV"/>
-                            <constraint firstItem="BAj-a7-eOr" firstAttribute="height" secondItem="LNl-25-jdH" secondAttribute="height" multiplier="0.2" id="ob3-4t-47j"/>
-                            <constraint firstItem="BAj-a7-eOr" firstAttribute="leading" secondItem="uAJ-FD-4P8" secondAttribute="trailing" id="xZh-6k-DqQ"/>
+                            <constraint firstItem="bZh-Xz-Omp" firstAttribute="width" secondItem="caU-bs-9O8" secondAttribute="width" id="dd0-LO-CcD"/>
+                            <constraint firstItem="bZh-Xz-Omp" firstAttribute="height" secondItem="LNl-25-jdH" secondAttribute="height" multiplier="0.5" id="vjG-r8-Y9n"/>
+                            <constraint firstItem="bZh-Xz-Omp" firstAttribute="top" secondItem="caU-bs-9O8" secondAttribute="bottom" id="wPY-3v-Epg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BQv-er-zjm"/>
                     </view>
                     <connections>
-                        <outlet property="TurnPlayerNumOfHandLabel" destination="BAj-a7-eOr" id="i1n-Ov-qbm"/>
-                        <outlet property="turnPlayerNameLabel" destination="uAJ-FD-4P8" id="fQL-Su-w7W"/>
+                        <outlet property="playerFieldCustomView" destination="bZh-Xz-Omp" id="Stn-Td-BUa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fKY-vu-NI2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1073" y="548"/>
+            <point key="canvasLocation" x="1072.8" y="547.37631184407803"/>
         </scene>
     </scenes>
 </document>
