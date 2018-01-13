@@ -9,13 +9,19 @@
 import UIKit
 
 //MARK: - Main
+/*
+ プレイ人数とPlayerNameを入力するためのViewControllerです。
+ 上部にPlay人数を決めるためのドラムと下部にPlayerの名前を入力するためのTextViewを持ちます。
+ */
+
 class InitialSettingViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource{
 
-    
+    //上のドラムと、その上下に表示する文字Labelです
     @IBOutlet weak var pickerView: UIPickerView!
     @IBOutlet weak var onPickerLabel: UILabel!
     @IBOutlet weak var belowPickerLabel: UILabel!
     
+    //名前を入力するためのTextViewです。左にあるLabelとセットでTextCustomViewを用いています。
     @IBOutlet weak var nameInputView0: TestCustomView!
     @IBOutlet weak var nameInputView1: TestCustomView!
     @IBOutlet weak var nameInputView2: TestCustomView!
@@ -24,21 +30,21 @@ class InitialSettingViewController: UIViewController, UIPickerViewDelegate, UIPi
     @IBOutlet weak var nameInputView5: TestCustomView!
     
     //let numOfPlayer: [[Int]] = [[2,3,4,5,6]]
-    let numOfPlayer: [[Int]] = [[3,4,5,6]]
-    var inputNanmeViews: [TestCustomView] = []
-    var names: [String] = []
-    var now: Int = 3
+    let numOfPlayer: [[Int]] = [[3,4,5,6]]      //ドラムに表示する数字です。ドラムは列を増やせるため今後ちょっとしたルールを追加するのにも使えます。
+    var inputNameViews: [TestCustomView] = []   //TextViewを一括操作するための配列です
+    var names: [String] = []                    //次のViewControllerに名前を行き渡すための配列
+    var now: Int = 3                            //表示するTextVIewの数の初期値
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         onPickerLabel.text = "プレイ人数を選択してください"
         belowPickerLabel.text = "人でプレイ!!"
-        inputNanmeViews = [nameInputView0, nameInputView1, nameInputView2, nameInputView3, nameInputView4, nameInputView5]
+        inputNameViews = [nameInputView0, nameInputView1, nameInputView2, nameInputView3, nameInputView4, nameInputView5]
         
         var i = 1
-        for view in inputNanmeViews{
+        for view in inputNameViews{
             if(i > now){
+                //ドラムで選択された数値以上のTextViewは表示されない
                 view.alpha = 0
             }
             view.leftLabel.text = "Player" + i.description + ": "
@@ -52,13 +58,14 @@ class InitialSettingViewController: UIViewController, UIPickerViewDelegate, UIPi
         // Dispose of any resources that can be recreated.
     }
     
-//MARK: - Segue
+    //MARK: - Segue
+    //GameViewControllerへPlayerNameの配列を人数分の長さだけ引きわたす。名前が入力されていないものは自動的に「Player"n"」になる
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "toNextSegue") {
             print("debug_InitialSettingViewController_prepare()_toNextSegue")
             for i in 0 ..< now{
-                if(inputNanmeViews[i].textView.text != ""){
-                    names.append(inputNanmeViews[i].textView.text!)
+                if(inputNameViews[i].textView.text != ""){
+                    names.append(inputNameViews[i].textView.text!)
                 }else{
                     names.append("player"+String(i+1))
                 }
@@ -95,10 +102,10 @@ class InitialSettingViewController: UIViewController, UIPickerViewDelegate, UIPi
     
     func showOrHideNameInputView(component: Int, row: Int){
         for i in 0 ..< numOfPlayer[component][row]{
-            inputNanmeViews[i].alpha = 1
+            inputNameViews[i].alpha = 1
         }
-        for i in numOfPlayer[component][row] ..< inputNanmeViews.count{
-            inputNanmeViews[i].alpha = 0
+        for i in numOfPlayer[component][row] ..< inputNameViews.count{
+            inputNameViews[i].alpha = 0
         }
     }
 }

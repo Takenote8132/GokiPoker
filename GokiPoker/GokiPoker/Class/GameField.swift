@@ -36,12 +36,8 @@ class GameField {
         //それぞれのカードタイプごとに7枚でDeckを初期化
         deck = Deck(numOfDeck: (Card.numOfCardType*7))
 
-        //PlayerたちにCardを配る＋そのdebug
+        //PlayerたちにCardを配る
         destributeCardsToPlayersFromDeck()
-        for player in players{
-            print("debug_GameField_player.showHand(), \(player.name) : " + player.showHand())
-            print("debug_GameField_player.showField(), \(player.name) : " + player.showHand())
-        }
     }
 }
 

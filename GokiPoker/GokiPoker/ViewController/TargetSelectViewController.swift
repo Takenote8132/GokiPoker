@@ -7,6 +7,10 @@
 //
 
 import UIKit
+/*
+ カードを宣言するViewが来る予定、まだ中身は実装していない
+ */
+
 
 class TargetSelectViewController: UIViewController {
 

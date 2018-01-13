@@ -250,7 +250,7 @@
                         <viewLayoutGuide key="safeArea" id="LAc-Bg-ap2"/>
                     </view>
                     <connections>
-                        <outlet property="customView0" destination="sfF-6g-ejQ" id="SLx-Hs-cUY"/>
+                        <outlet property="targetPlayerCustomView" destination="sfF-6g-ejQ" id="SLx-Hs-cUY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="COQ-70-XA1" userLabel="First Responder" sceneMemberID="firstResponder"/>
