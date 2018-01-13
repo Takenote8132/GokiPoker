@@ -8,6 +8,11 @@
 
 import Foundation
 
+/*
+ 現実世界にいるPlayerたちを表現するためのクラス。
+ 名前と指標番号、手札と場を持つ。
+ */
+
 //MARK: - Main
 class Player{
     let name: String
@@ -15,6 +20,7 @@ class Player{
     var hand: PlayerHandField
     var field: PlayerField
     
+    //初期化のタイミングでそれぞれのFieldに自分と同じindexを渡す
     init(index: Int, name: String) {
         self.name = name
         self.index = index
@@ -26,11 +32,11 @@ class Player{
 //MARK: - Function
 extension Player{
     func addCardToHand(card: Card){
-        hand.cardsInField.append(card)
+        hand.addCard(card: card)
     }
     
     func addCardToField(card: Card){
-        field.cardsInField.append(card)
+        field.addCard(card: card)
     }
     
     func showHand() -> String {

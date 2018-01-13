@@ -8,6 +8,10 @@
 
 import Foundation
 
+/*
+ Playerの手札を表現しているFieldです。
+ まだ色々と未実装です。
+ */
 class PlayerHandField: CardFieldProtcol {
     
     var cardsInField: [Card] = []
@@ -15,5 +19,12 @@ class PlayerHandField: CardFieldProtcol {
     
     required init(index: Int){
         self.index = index
+    }
+}
+
+extension PlayerHandField{
+    //まだ処理が足りていない。他の部分の処理が見えてきたら戻ってくる
+    func playCardAt(num: Int) -> Card {
+        return cardsInField[num]
     }
 }

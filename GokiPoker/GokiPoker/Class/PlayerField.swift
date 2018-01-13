@@ -8,6 +8,10 @@
 
 import Foundation
 
+/*
+ 
+ */
+
 //MARK: - Protcol
 class PlayerField: CardFieldProtcol {
     var cardsInField: [Card] = []
@@ -19,6 +23,7 @@ class PlayerField: CardFieldProtcol {
 
 //MARK: - Oroginal function
 extension PlayerField{
+    //それぞれのタイプのカードが場に何枚出ているかをintの配列として返すfunc
     func getStatus() -> [Int]{
         var howManyEachCards = [Int](repeating: 0, count: Card.numOfCardType)
         for card in cardsInField{

@@ -8,6 +8,10 @@
 
 import UIKit
 
+/*
+ これは練習用に作成したファイルなので中身はアプリに関係ありません。
+ */
+
 class TestTableViewCell: UITableViewCell {
 
     @IBOutlet weak var testCustomView: TestCustomView!
